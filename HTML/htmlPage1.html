@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Моя первая страница</title>
 </head>
 <body>
 <h1>Страница 1</h1>
 <form action="select1.php" method="post">
-    <label>
-        Имя<input type="text" name="firstName" property="Введите имя">
-    </label>
-    <label>
-        Фамилия<input type="text" name="secondName" property="Введите фамилию">
-    </label>
+    <div>
+        <label>
+            Имя <input type="text" name="firstName" property="Введите имя">
+        </label>
+    </div>
+    <div>
+        <label>
+            Фамилия <input type="text" name="secondName" property="Введите фамилию">
+        </label>
+    </div>
     <div>
         <label>
             <input type="radio" name="gender" value="male">Мужчина
@@ -20,9 +24,13 @@
         <label>
             <input type="radio" name="gender" value="female">Женщина
         </label>
+    </div>
+    <div>
         <label>
             <input type="checkbox" name="smoking">Курю
         </label>
+    </div>
+    <div>
         <label>
             <input type="checkbox" name="alcoholDrinking">Пью алкоголь
         </label>
@@ -37,22 +45,30 @@
                 <option value="none">Нет</option>
             </select>
         </label>
+    </div>
+    <div>
         <label>Увлечения
-            <select size="5" multiple name="hobbies">
-                <option value="music">Музыка</option>
-                <option value="movie">Фильмы</option>
-                <option value="soapOpera">Сериалы</option>
-                <option value="sport">Активные виды спорта</option>
-                <option value="socialActivities">Социальные мероприятия</option>
-            </select>
+            <p>
+                <select size="5" multiple name="hobbies">
+                    <option value="music">Музыка</option>
+                    <option value="movie">Фильмы</option>
+                    <option value="soapOpera">Сериалы</option>
+                    <option value="sport">Активные виды спорта</option>
+                    <option value="socialActivities">Социальные мероприятия</option>
+                </select>
+            </p>
         </label>
     </div>
     <div>
-        <label>
-            Расскажите о себе<textarea name="aboutPerson" maxlength="200" wrap="soft">Расскажите о себе</textarea>
-        </label>
+        <label for="textarea1">Расскажите о себе</label>
     </div>
-    <input type="submit" value="Отправить">
+    <div>
+        <textarea id="textarea1" name="aboutPerson" maxlength="200" wrap="soft"
+                  placeholder="Расскажите о себе"></textarea>
+    </div>
+    <div>
+        <input type="submit" value="Отправить">
+    </div>
 </form>
 <a href="htmlPage2.html">На страницу 2</a>
 </body>
