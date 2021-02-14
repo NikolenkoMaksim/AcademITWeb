@@ -1,0 +1,48 @@
+table {
+    border-collapse: collapse;
+    border: 1px solid #cfcfcf;
+    box-sizing: border-box;
+    text-indent: 11px;
+    text-align: left;
+    font-family: "Arial", serif;
+    font-size: 22px;
+}
+
+th, td {
+    border: 1px solid #cfcfcf;
+    vertical-align: middle;
+}
+
+tr {
+    height: 52px;
+}
+
+th {
+    color: #ffffff;
+    background-color: #3498db;
+    height: 48px;
+}
+
+tbody tr:nth-child(2n) {
+    background-color: #ffffff;
+}
+
+tbody tr:nth-child(2n + 1) {
+    background-color: #eeeeee;
+}
+
+tr th:nth-child(1), tr td:nth-child(1) {
+    width: 170px;
+}
+
+tr th:nth-child(2), tr td:nth-child(2) {
+    width: 170px;
+}
+
+tr th:nth-child(3), tr td:nth-child(3) {
+    width: 308px;
+}
+
+tr th:nth-child(4), tr td:nth-child(4) {
+    width: 200px;
+}

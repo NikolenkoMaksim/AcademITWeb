@@ -1,0 +1,39 @@
+.cell {
+    box-sizing: border-box;
+    width: 850px;
+    height: 465px;
+    background-color: #feeed6;
+    font-family: "Arial", serif;
+    font-size: 18px;
+    color: #676565;
+    padding: 10px 12px;
+    line-height: 1.15;
+}
+
+.cell > * {
+    margin-bottom: 12px;
+}
+
+.cell_header {
+    font-family: "Arial", serif;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+.enlarged_paragraph{
+    font-size: 19px;
+}
+
+.normal_paragraph{
+    font-size: 17px;
+    line-height: 1.4;
+    text-indent: 18px;
+    font-weight: 500;
+    text-align: justify;
+}
+
+span {
+    color: #378db2;
+    font-weight: 700;
+}
