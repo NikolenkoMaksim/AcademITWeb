@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e9e80c8-522f-4a19-b014-971768528a2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/working_with_arrays/wofkingWithArraysPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/working_with_arrays/workingWithArrayScript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/working_with_objects/workingWithObjectsPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/working_with_objects/workingWithObjectsStyle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -12,8 +16,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -50,15 +55,13 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -78,6 +81,7 @@
       <workItem from="1612096522737" duration="340000" />
       <workItem from="1612268796687" duration="1766000" />
       <workItem from="1613141642161" duration="38892000" />
+      <workItem from="1613317177746" duration="14692000" />
     </task>
     <task id="LOCAL-00001" summary="Задача HTML выполнена">
       <created>1611494159420</created>
