@@ -32,14 +32,14 @@ console.log("Countries names with max cities count:");
     var maxCitiesCount = 0;
     var countriesWithMaxCitiesCountNames = [];
 
-    for (var i = 0; i < countries.length; i++) {
+    countries.forEach(function (item, i, countries) {
         if (countries[i].cities.length > maxCitiesCount) {
             countriesWithMaxCitiesCountNames = [countries[i].name];
             maxCitiesCount = countries[i].cities.length;
         } else if (countries[i].cities.length === maxCitiesCount) {
             countriesWithMaxCitiesCountNames.push(countries[i].name);
         }
-    }
+    })
 
     console.log(countriesWithMaxCitiesCountNames.join(", "));
 })(ETR.countries);
@@ -53,9 +53,9 @@ ETR.countriesPopulation = (function createObjectWithCountriesAndPopulation(count
         }, 0);
     }
 
-    for (var i = 0; i < countries.length; i++) {
+    countries.forEach(function (item, i, countries) {
         countriesPopulation[countries[i].name] = summarizeCitiesPopulation(countries[i]);
-    }
+    });
 
     return countriesPopulation;
 })(ETR.countries);

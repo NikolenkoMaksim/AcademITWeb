@@ -1,7 +1,7 @@
 var ETR = {};
 ETR.array1 = [15, 2, 0, 5, -3, 16, 4, 18, 9, 5];
 
-(function descendingSort(array) {
+(function (array) {
     array.sort(function (e1, e2) {
         return e2 - e1;
     })
@@ -9,12 +9,12 @@ ETR.array1 = [15, 2, 0, 5, -3, 16, 4, 18, 9, 5];
 
 console.log(ETR.array1);
 
-ETR.array2 = (function createArrayFromFirstElements(array, elementsAmount) {
+ETR.array2 = (function (array, elementsAmount) {
     return array.slice(0, elementsAmount)
 })(ETR.array1, 5);
 console.log(ETR.array2);
 
-ETR.array3 = (function createArrayFromLastElements(array, elementsAmount) {
+ETR.array3 = (function (array, elementsAmount) {
     return array.slice(array.length - elementsAmount)
 })(ETR.array1, 5)
 console.log(ETR.array3);
@@ -28,7 +28,7 @@ console.log(ETR.array1.reduce(function (accumulator, currentElement) {
 }, 0));
 
 ETR.array4 = [];
-(function fillArrayWithNumbers(array, startNumber, finishNumber) {
+(function (array, startNumber, finishNumber) {
     for (var i = startNumber; i <= finishNumber; i++) {
         array.push(i);
     }

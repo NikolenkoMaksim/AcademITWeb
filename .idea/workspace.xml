@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e9e80c8-522f-4a19-b014-971768528a2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/working_with_arrays/wofkingWithArraysPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/working_with_arrays/workingWithArrayScript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/working_with_objects/workingWithObjectsPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/working_with_objects/workingWithObjectsStyle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/working_with_objects/workingWithObjectsScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/working_with_objects/workingWithObjectsScript.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +78,7 @@
       <workItem from="1612096522737" duration="340000" />
       <workItem from="1612268796687" duration="1766000" />
       <workItem from="1613141642161" duration="38892000" />
-      <workItem from="1613317177746" duration="14692000" />
+      <workItem from="1613317177746" duration="17141000" />
     </task>
     <task id="LOCAL-00001" summary="Задача HTML выполнена">
       <created>1611494159420</created>
@@ -139,7 +136,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613294255978</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Выполнена задача">
+      <created>1613418886960</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1613418886961</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Выполнена задача">
+      <created>1613418906002</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1613418906002</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +173,7 @@
     <MESSAGE value="Добавлены изменения" />
     <MESSAGE value="Исправлены замечания" />
     <MESSAGE value="Выполнены задачи по CSS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Выполнены задачи по CSS" />
+    <MESSAGE value="Выполнена задача" />
+    <option name="LAST_COMMIT_MESSAGE" value="Выполнена задача" />
   </component>
 </project>
