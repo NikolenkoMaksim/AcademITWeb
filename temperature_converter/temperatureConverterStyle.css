@@ -1,0 +1,41 @@
+body {
+    background-color: lightcyan;
+}
+
+.main_block {
+    width: 800px;
+    margin: auto;
+    font-size: 22px;
+    box-sizing: border-box;
+}
+
+.header {
+    font-size: 30px;
+    text-align: center;
+}
+
+div {
+    margin: 20px;
+}
+
+#input_text {
+    height: 24px;
+    width: 750px;
+    font-size: 19px;
+}
+
+button {
+    height: 100%;
+    width: 100%;
+    font-size: 22px
+}
+
+.button_block {
+    height: 30px;
+    width: 150px;
+    margin: auto;
+}
+
+.input_label, .output_text {
+    margin-left: 30px;
+}
