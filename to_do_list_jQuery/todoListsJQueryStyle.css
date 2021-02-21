@@ -1,0 +1,61 @@
+body {
+    background-color: lightcyan;
+}
+
+.main_block {
+    width: 1200px;
+    margin: auto;
+    font-size: 22px;
+    box-sizing: border-box;
+}
+
+.header {
+    font-size: 30px;
+    text-align: center;
+}
+
+div, li {
+    margin: 20px;
+}
+
+#input_text_field {
+    height: 24px;
+    width: 1150px;
+    font-size: 19px;
+}
+
+#add_button {
+    height: 100%;
+    width: 100%;
+    font-size: 22px
+}
+
+.button_block {
+    height: 30px;
+    width: 150px;
+    margin: auto;
+}
+
+.input_label, .output_text_block {
+    margin-left: 30px;
+}
+
+.error_message_block {
+    color: red;
+}
+
+li {
+    width: 100%;
+}
+
+.edit_button, .delete_button, .note_text {
+
+}
+
+.edit_button, .delete_button, .save_button, .cancel_button {
+    margin-left: 10px;
+}
+
+.edit_text {
+    width: 858px;
+}
