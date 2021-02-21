@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e9e80c8-522f-4a19-b014-971768528a2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/temperature_converter/temperatureConverterPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temperature_converter/temperatureConverterScript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temperature_converter/temperatureConverterStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +86,7 @@
       <workItem from="1612096522737" duration="340000" />
       <workItem from="1612268796687" duration="1766000" />
       <workItem from="1613141642161" duration="38892000" />
-      <workItem from="1613317177746" duration="29555000" />
+      <workItem from="1613317177746" duration="30823000" />
     </task>
     <task id="LOCAL-00001" summary="Задача HTML выполнена">
       <created>1611494159420</created>
@@ -168,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613487060665</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Выполнена задача &quot;Перевод температур&quot;">
+      <created>1613661496063</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1613661496064</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +197,7 @@
     <MESSAGE value="Выполнены задачи по CSS" />
     <MESSAGE value="Выполнена задача" />
     <MESSAGE value="Внесены правки" />
-    <option name="LAST_COMMIT_MESSAGE" value="Внесены правки" />
+    <MESSAGE value="Выполнена задача &quot;Перевод температур&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Выполнена задача &quot;Перевод температур&quot;" />
   </component>
 </project>
