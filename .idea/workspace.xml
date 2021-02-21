@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e9e80c8-522f-4a19-b014-971768528a2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/to_do_list/toDoList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/to_do_list/toDoListScript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/to_do_list/toDoListsStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/to_do_list_jQuery/toDoListJQuery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/to_do_list_jQuery/toDoListJQueryScript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/to_do_list_jQuery/toDoListsJQueryStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temperature_converter/temperatureConverterPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/temperature_converter/temperatureConverterPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temperature_converter/temperatureConverterScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/temperature_converter/temperatureConverterScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temperature_converter/temperatureConverterStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/temperature_converter/temperatureConverterStyle.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -55,6 +64,9 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.other" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Documents\IdeaProjects\AcademITWeb" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Documents\IdeaProjects\AcademITWeb" />
     </key>
@@ -86,7 +98,7 @@
       <workItem from="1612096522737" duration="340000" />
       <workItem from="1612268796687" duration="1766000" />
       <workItem from="1613141642161" duration="38892000" />
-      <workItem from="1613317177746" duration="30823000" />
+      <workItem from="1613317177746" duration="52550000" />
     </task>
     <task id="LOCAL-00001" summary="Задача HTML выполнена">
       <created>1611494159420</created>
@@ -172,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613661496064</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Исправлены замечания">
+      <created>1613893014842</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1613893014842</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,11 +212,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Задача HTML выполнена" />
     <MESSAGE value="Добавлены изменения" />
-    <MESSAGE value="Исправлены замечания" />
     <MESSAGE value="Выполнены задачи по CSS" />
     <MESSAGE value="Выполнена задача" />
     <MESSAGE value="Внесены правки" />
     <MESSAGE value="Выполнена задача &quot;Перевод температур&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Выполнена задача &quot;Перевод температур&quot;" />
+    <MESSAGE value="Исправлены замечания" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлены замечания" />
   </component>
 </project>
