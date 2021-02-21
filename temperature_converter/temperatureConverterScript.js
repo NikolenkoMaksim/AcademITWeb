@@ -1,28 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
-    inputText = document.getElementById("input_text");
-    errorMassage = document.querySelector(".error_message");
-    outputText = document.querySelector(".output_text");
+    var inputTextField = document.getElementById("input_text_field");
+    var outputTextBlock = document.querySelector(".output_text_block");
 
 
-    document.querySelector(".button").addEventListener("click", function () {
-        inputTextValue = inputText.value;
+    document.getElementById("convert_button").addEventListener("click", function () {
+        var inputTextValue = inputTextField.value;
 
         if (inputTextValue === "") {
-            outputText.textContent = "Пожалуйста, заполните поле ввода";
+            outputTextBlock.textContent = "Пожалуйста, заполните поле ввода";
             return;
         }
 
         if (isNaN(inputTextValue)) {
-            outputText.textContent = "В поле ввода присутсвуют недопустимые символы";
+            outputTextBlock.textContent = "В поле ввода присутсвуют недопустимые символы";
             return;
         }
 
-        inputText.value = "";
+        inputTextField.value = "";
 
-        valueInKelvin = Number.parseFloat(inputTextValue) + 273.15;
-        valueInFahrenheit = inputTextValue * 1.8 + 32;
+        var valueInKelvin = Number.parseFloat(inputTextValue) + 273.15;
+        var valueInFahrenheit = inputTextValue * 1.8 + 32;
 
-        outputText.textContent = inputTextValue + " градусов Цельсия = " + Math.round(valueInKelvin * 1000) / 1000 +
-            " градусов Кельвина = " + Math.round(valueInFahrenheit * 1000) / 1000 + " градусов Фаренгейта";
+        outputTextBlock.textContent = inputTextValue + "° Цельсия = " + Math.round(valueInKelvin * 1000) / 1000 +
+            "° Кельвина = " + Math.round(valueInFahrenheit * 1000) / 1000 + "° Фаренгейта";
     })
 });

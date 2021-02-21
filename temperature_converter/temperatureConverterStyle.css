@@ -18,7 +18,7 @@ div {
     margin: 20px;
 }
 
-#input_text {
+#input_text_field {
     height: 24px;
     width: 750px;
     font-size: 19px;
@@ -34,8 +34,4 @@ button {
     height: 30px;
     width: 150px;
     margin: auto;
-}
-
-.input_label, .output_text {
-    margin-left: 30px;
 }
