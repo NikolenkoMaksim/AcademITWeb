@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS форма</title>
+    <link rel="stylesheet" type="text/css" href="cssReset_v2.0.css">
+    <link rel="stylesheet" type="text/css" href="cssFormStyle.css">
+</head>
+<body>
+<h2 class="header">Отправить заявку</h2>
+<div class="application_form_block">
+    <form class="application_form" action="select1.php" method="post">
+        <div class="label_block">
+            <label for="input_name">Ваше имя</label>
+        </div>
+        <div class="input_block">
+            <input id="input_name" class="application_form_text_input" name="name" type="text" placeholder="Ваше имя *"
+                   required>
+        </div>
+        <div class="label_block">
+            <label for="input_telephone">Ваш номер телефона</label>
+        </div>
+        <div class="input_block">
+            <input id="input_telephone" class="application_form_text_input" name="phone" type="text"
+                   placeholder="Ваш номер телефона *" required>
+        </div>
+        <div class="label_block">
+            <label for="input_mail">Ваш emale или VK</label>
+        </div>
+        <div class="input_block">
+            <input id="input_mail" class="application_form_text_input" name="phone" type="text"
+                   placeholder="Ваш emale или VK *" required>
+        </div>
+        <div class="label_block">
+            <label for="input_comment">Комментарий</label>
+        </div>
+        <div class="input_block">
+            <textarea id="input_comment" name="comment" placeholder="Комментарий (не обязательно)"></textarea>
+        </div>
+        <p class="application_form_text">Заполните и отправте форму, и мы перезвоним Вам по указанному номеру</p>
+        <div class="submit_button_block">
+            <input class="submit_button" type="submit" value="Отправить заявку">
+        </div>
+    </form>
+</div>
+</body>
+</html>
