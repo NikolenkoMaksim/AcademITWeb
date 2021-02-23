@@ -1,48 +1,41 @@
-table {
+.employeesTable {
     border-collapse: collapse;
     border: 1px solid #cfcfcf;
     box-sizing: border-box;
-    text-indent: 11px;
     text-align: left;
     font-family: "Arial", serif;
     font-size: 22px;
 }
 
-th, td {
+.employeesColumn1, .employeesColumn2, .employeesColumn3, .employeesColumn4 {
     border: 1px solid #cfcfcf;
-    vertical-align: middle;
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-bottom: 17px;
+    padding-top: 17px;
 }
 
-tr {
-    height: 52px;
+.employeesTbody tr:nth-child(even) {
+    background-color: white;
 }
 
-th {
-    color: #ffffff;
+.employeesTbody tr:nth-child(odd) {
+    background-color: #eee;
+}
+
+.employeesTitleRow {
+    color: white;
     background-color: #3498db;
-    height: 48px;
 }
 
-tbody tr:nth-child(even) {
-    background-color: #ffffff;
-}
-
-tbody tr:nth-child(odd) {
-    background-color: #eeeeee;
-}
-
-tr th:nth-child(1), tr td:nth-child(1) {
+.employeesColumn1, .employeesColumn2 {
     width: 170px;
 }
 
-tr th:nth-child(2), tr td:nth-child(2) {
-    width: 170px;
-}
-
-tr th:nth-child(3), tr td:nth-child(3) {
+.employeesColumn3 {
     width: 308px;
 }
 
-tr th:nth-child(4), tr td:nth-child(4) {
+.employeesColumn4 {
     width: 200px;
 }
