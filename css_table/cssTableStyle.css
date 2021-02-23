@@ -9,10 +9,7 @@
 
 .employeesColumn1, .employeesColumn2, .employeesColumn3, .employeesColumn4 {
     border: 1px solid #cfcfcf;
-    padding-left: 11px;
-    padding-right: 11px;
-    padding-bottom: 17px;
-    padding-top: 17px;
+    padding: 17px 11px;
 }
 
 .employeesTbody tr:nth-child(even) {
