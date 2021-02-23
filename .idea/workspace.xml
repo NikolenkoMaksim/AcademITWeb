@@ -2,23 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e9e80c8-522f-4a19-b014-971768528a2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css_table/cssReset_v2.0.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css_text/cssReset_v2.0.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/libs/css_reset/cssReset_v2.0.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temperature_converter/cssReset_v2.0.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/to_do_list/normalize_v8.0.1.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/to_do_list_jQuery/normalize_v8.0.1.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css_forma/cssForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/css_forma/cssForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css_reset/cssReset_v2.0.css" beforeDir="false" afterPath="$PROJECT_DIR$/css_forma/cssReset_v2.0.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css_table/cssTable.html" beforeDir="false" afterPath="$PROJECT_DIR$/css_table/cssTable.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css_table/cssTableStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/css_table/cssTableStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css_text/cssText.html" beforeDir="false" afterPath="$PROJECT_DIR$/css_text/cssText.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/jquery/jquery-3.5.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/libs/jquery/jquery-3.5.1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/normalize/normalize_v8.0.1.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/libs/normalize/normalize_v8.0.1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temperature_converter/temperatureConverterPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/temperature_converter/temperatureConverterPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do_list/todoList.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/todoList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/to_do_list_jQuery/todoListJQuery.html" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list_jQuery/todoListJQuery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css_text/cssTextStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/css_text/cssTextStyle.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +98,7 @@
       <workItem from="1612096522737" duration="340000" />
       <workItem from="1612268796687" duration="1766000" />
       <workItem from="1613141642161" duration="38892000" />
-      <workItem from="1613317177746" duration="57374000" />
+      <workItem from="1613317177746" duration="60545000" />
     </task>
     <task id="LOCAL-00001" summary="Задача HTML выполнена">
       <created>1611494159420</created>
@@ -225,7 +212,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613934981659</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Исправлены замечания">
+      <created>1614095025017</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1614095025018</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Исправлены замечания">
+      <created>1614095124527</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1614095124527</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,10 +251,10 @@
     <MESSAGE value="Выполнена задача" />
     <MESSAGE value="Внесены правки" />
     <MESSAGE value="Выполнена задача &quot;Перевод температур&quot;" />
-    <MESSAGE value="Исправлены замечания" />
     <MESSAGE value="Выполнена задача TODO List jQuery" />
     <MESSAGE value="Выполнена задача TODO List" />
     <MESSAGE value="Внесены дополнения" />
-    <option name="LAST_COMMIT_MESSAGE" value="Внесены дополнения" />
+    <MESSAGE value="Исправлены замечания" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлены замечания" />
   </component>
 </project>

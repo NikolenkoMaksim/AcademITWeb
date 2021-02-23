@@ -1,31 +1,28 @@
-.cell {
+.course_description {
     box-sizing: border-box;
-    width: 850px;
-    height: 465px;
+    max-width: 850px;
     background-color: #feeed6;
     font-family: "Arial", serif;
     font-size: 18px;
     color: #676565;
-    padding: 10px 12px;
+    padding: 8px 12px;
     line-height: 1.15;
 }
 
-.cell > * {
-    margin-bottom: 12px;
-}
-
-.cell_header {
+.course_description_header {
     font-family: "Arial", serif;
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 14px;
 }
 
-.enlarged_paragraph{
+.enlarged_paragraph {
+    margin-top: 12px;
     font-size: 19px;
 }
 
-.normal_paragraph{
+.normal_paragraph {
+    margin-top: 12px;
     font-size: 17px;
     line-height: 1.4;
     text-indent: 18px;
@@ -33,7 +30,7 @@
     text-align: justify;
 }
 
-span {
+.blue_text {
     color: #378db2;
     font-weight: 700;
 }
