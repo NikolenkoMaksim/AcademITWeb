@@ -1,6 +1,4 @@
-var ETR = {};
-
-ETR.countries = [
+var countries = [
     {
         name: "Federative Republic of Brazil",
         cities: [
@@ -20,15 +18,16 @@ ETR.countries = [
         name: "Russian Federation",
         cities: [
             {name: "Moscow", population: 12678079},
-            {name: "Saint Petersburg", population: 539064},
+            {name: "Saint Petersburg", population: 5390641},
             {name: "Novosibirsk", population: 1625631}
         ]
     }
 ];
 
 console.log("Countries names with max cities count:");
+console.log(countries);
 
-(function printCountriesNamesWithMaxCitiesCount(countries) {
+function getCountriesNamesWithMaxCitiesCount(countries) {
     var maxCitiesCount = 0;
     var countriesWithMaxCitiesCountNames = [];
 
@@ -41,23 +40,27 @@ console.log("Countries names with max cities count:");
         }
     })
 
-    console.log(countriesWithMaxCitiesCountNames.join(", "));
-})(ETR.countries);
+    return countriesWithMaxCitiesCountNames;
+}
 
-ETR.countriesPopulation = (function createObjectWithCountriesAndPopulation(countries) {
+console.log(getCountriesNamesWithMaxCitiesCount(countries));
+
+function getObjectWithCountriesAndPopulation(countries) {
     var countriesPopulation = {};
 
-    function summarizeCitiesPopulation(country) {
+    function getCountriesPopulation(country) {
         return country.cities.reduce(function (accumulator, currentElement) {
             return accumulator + currentElement.population;
         }, 0);
     }
 
     countries.forEach(function (item, i, countries) {
-        countriesPopulation[countries[i].name] = summarizeCitiesPopulation(countries[i]);
+        countriesPopulation[countries[i].name] = getCountriesPopulation(countries[i]);
     });
 
     return countriesPopulation;
-})(ETR.countries);
+}
 
-console.log(ETR.countriesPopulation);
+var countriesPopulation = getObjectWithCountriesAndPopulation(countries);
+
+console.log(countriesPopulation);
