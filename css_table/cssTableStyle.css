@@ -1,4 +1,4 @@
-.employeesTable {
+.employees_table {
     border-collapse: collapse;
     border: 1px solid #cfcfcf;
     box-sizing: border-box;
@@ -7,36 +7,36 @@
     font-size: 22px;
 }
 
-.employeesColumn1, .employeesColumn2, .employeesColumn3, .employeesColumn4 {
+.employees_first_name, .employees_last_name, .employees_job_title, .employees_twitter {
     border: 1px solid #cfcfcf;
     padding: 14px 11px;
 }
 
-.employeesTbody tr:nth-child(even) {
+.employees_tbody tr:nth-child(even) {
     background-color: white;
 }
 
-.employeesTbody tr:nth-child(odd) {
+.employees_tbody tr:nth-child(odd) {
     background-color: #eee;
 }
 
-.employeesTitleRow {
+.employees_title_row {
     color: white;
     background-color: #3498db;
 }
 
-.employeesColumn1, .employeesColumn2 {
+.employees_first_name, .employees_last_name {
     width: 150px;
 }
 
-.employeesColumn2 {
+.employees_last_name {
     width: 150px;
 }
 
-.employeesColumn3 {
+.employees_job_title {
     width: 290px;
 }
 
-.employeesColumn4 {
+.employees_twitter {
     width: 175px;
 }
