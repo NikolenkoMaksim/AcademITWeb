@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e9e80c8-522f-4a19-b014-971768528a2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/phoneBook/phonebook_css/jquery_confirm.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phoneBook/phonebook_css/phoneBookScript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phoneBook/phonebook_js/jquery_confirm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/telephoneBook/jquery-3.5.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/phoneBook/phonebook_js/jquery-3.5.1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/telephoneBook/normalize_v8.0.1.css" beforeDir="false" afterPath="$PROJECT_DIR$/phoneBook/phonebook_css/normalize_v8.0.1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/telephoneBook/telephoneBookPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/phoneBook/phoneBookPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/telephoneBook/telephoneBookScript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/telephoneBook/telephoneBookStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/phoneBook/phonebook_css/phoneBookStyle.css" afterDir="false" />
-    </list>
+    <list default="true" id="1e9e80c8-522f-4a19-b014-971768528a2e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,7 +98,7 @@
       <workItem from="1612268796687" duration="1766000" />
       <workItem from="1613141642161" duration="38892000" />
       <workItem from="1613317177746" duration="77041000" />
-      <workItem from="1614263775960" duration="31828000" />
+      <workItem from="1614263775960" duration="32182000" />
     </task>
     <task id="LOCAL-00001" summary="Задача HTML выполнена">
       <created>1611494159420</created>
@@ -292,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614277568835</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Выполнена задача phoneBook со 1м и 2м усложнением">
+      <created>1614450810979</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1614450810979</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,6 +319,7 @@
     <MESSAGE value="Внесены правки" />
     <MESSAGE value="Исправлены замечания" />
     <MESSAGE value="Внесены дополнение" />
-    <option name="LAST_COMMIT_MESSAGE" value="Внесены дополнение" />
+    <MESSAGE value="Выполнена задача phoneBook со 1м и 2м усложнением" />
+    <option name="LAST_COMMIT_MESSAGE" value="Выполнена задача phoneBook со 1м и 2м усложнением" />
   </component>
 </project>
