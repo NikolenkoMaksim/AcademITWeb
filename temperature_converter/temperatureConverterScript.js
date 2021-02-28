@@ -3,15 +3,15 @@ document.addEventListener("DOMContentLoaded", function () {
     var outputTextBlock = document.querySelector(".output_text_block");
 
     document.getElementById("convert_button").addEventListener("click", function () {
-        var inputTextValue = inputTextField.value;
+        var inputText = inputTextField.value;
 
-        if (inputTextValue === "") {
+        if (inputText === "") {
             outputTextBlock.textContent = "Пожалуйста, заполните поле ввода";
             outputTextBlock.classList.add("error_message");
             return;
         }
 
-        if (isNaN(inputTextValue)) {
+        if (isNaN(inputText)) {
             outputTextBlock.textContent = "В поле ввода присутствуют недопустимые символы";
             outputTextBlock.classList.add("error_message");
             return;
@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
         inputTextField.value = "";
         outputTextBlock.classList.remove("error_message");
 
-        var temperatureInKelvin = parseFloat(inputTextValue) + 273.15;
-        var temperatureInFahrenheit = inputTextValue * 1.8 + 32;
+        var temperatureInKelvin = parseFloat(inputText) + 273.15;
+        var temperatureInFahrenheit = inputText * 1.8 + 32;
 
-        outputTextBlock.textContent = inputTextValue + "° Цельсия = " + parseFloat(temperatureInKelvin.toFixed(3)) +
+        outputTextBlock.textContent = inputText + "° Цельсия = " + parseFloat(temperatureInKelvin.toFixed(3)) +
             "° Кельвина = " + parseFloat(temperatureInFahrenheit.toFixed(3)) + "° Фаренгейта";
     })
 });
