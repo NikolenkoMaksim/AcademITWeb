@@ -1,0 +1,82 @@
+body {
+    background-color: #e0ffff;
+}
+
+.main_block {
+    max-width: 1200px;
+    margin: auto;
+    font-size: 22px;
+    box-sizing: border-box;
+}
+
+.header {
+    font-size: 30px;
+    text-align: center;
+}
+
+.input_field_block {
+    padding: 25px 15px 10px;
+}
+
+.main_block > div > input {
+    height: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.button_block {
+    width: 150px;
+    margin: auto;
+}
+
+.main_block > div > button {
+    height: 30px;
+    width: 100%;
+    margin: auto;
+}
+
+.main_block > div > button:hover {
+    cursor: pointer;
+}
+
+.input_label, .output_text_block, .error_message_block {
+    margin-left: 30px;
+}
+
+.error_message_block {
+    color: #f00;
+    padding-left: 0;
+}
+
+.main_block > ul {
+    margin-top: 20px;
+}
+
+.main_block > ul > li {
+    width: 100%;
+    margin: 20px;
+}
+
+.main_block > ul > li > button, .main_block > ul > li > div > button {
+    margin-left: 10px;
+}
+
+.main_block > ul > li > button:hover, .main_block > ul > li > div > button:hover {
+    cursor: pointer;
+}
+
+.edit_text {
+    width: 858px;
+}
+
+.error_message_block {
+    padding: 10px 15px 15px;
+}
+
+.empty_block {
+    padding: 25px 15px;
+}
+
+.hidden_block {
+    display: none;
+}
