@@ -1,5 +1,5 @@
 body {
-    background-color: lightcyan;
+    background-color: #a8f3f3;
 }
 
 .main_block {
@@ -19,19 +19,27 @@ body {
     margin: 20px;
 }
 
-#input_text_field {
+.main_block > div > input {
     height: 24px;
     width: 750px;
     font-size: 19px;
 }
 
-#convert_button {
-    height: 30px;
-    width: 100%;
-    font-size: 22px
-}
-
 .button_block {
     width: 150px;
     margin: auto;
+}
+
+.button_block > button {
+    height: 30px;
+    width: 100%;
+    font-size: 22px;
+}
+
+.button_block > button:hover {
+    cursor: pointer;
+}
+
+.error_message {
+    color: #f00;
 }
