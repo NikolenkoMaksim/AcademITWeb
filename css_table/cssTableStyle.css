@@ -7,16 +7,12 @@
     font-size: 22px;
 }
 
-.employees_first_name, .employees_last_name, .employees_job_title, .employees_twitter {
+.employees_table > tbody > tr > td, .employees_table > thead > tr > th {
     border: 1px solid #cfcfcf;
     padding: 14px 11px;
 }
 
-.employees_tbody tr:nth-child(even) {
-    background-color: #fff;
-}
-
-.employees_tbody tr:nth-child(odd) {
+.employees_table > tbody tr:nth-child(odd) {
     background-color: #eee;
 }
 
