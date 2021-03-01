@@ -79,8 +79,6 @@ $(document).ready(function () {
             phoneInput.val("");
 
             tableRow.find(".phonebook_delete_column").click(function () {
-                var elem = $(this).closest('.item');
-
                 $.confirm({
                     'title': 'Подтверждение удаления',
                     'message': 'После удаления контакт нельзя будет восстановить. <br> Продолжить удаление?',
@@ -95,7 +93,7 @@ $(document).ready(function () {
                                     $(".phonebook_empty_row").show();
                                 }
 
-                                $(".phonebook_normal_row").each(function (index) {
+                                $(".phonebook_contact_row").each(function (index) {
                                     $(this).find(".phonebook_contact_number").text(index);
                                 })
                             }
@@ -110,12 +108,9 @@ $(document).ready(function () {
             });
         }
 
-        var newContactRow = $("<tr></tr>").addClass("phonebook_normal_row");
+        var newContactRow = $("<tr></tr>").addClass("phonebook_contact_row");
         setNewContactRow(newContactRow);
 
-        $(".phonebook_tbody").append(newContactRow);
+        $(".phonebook_table_block tbody").append(newContactRow);
     });
-
-
 });
-

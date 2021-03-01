@@ -11,29 +11,26 @@
     <script defer src="phoneBook_js/jquery_confirm.js"></script>
 </head>
 <body>
-<h1 class="main_header">Телефонная книга</h1>
+<h1 class="header">Телефонная книга</h1>
 <div class="new_contact_block">
     <h2 class="header">Новый контакт</h2>
     <div class="label_block">
         <label for="input_last_name">Фамилия</label>
     </div>
     <div class="input_block">
-        <input id="input_last_name" class="new_contact_text_input" name="family_name" type="text"
-               placeholder="Фамилия *" required>
+        <input id="input_last_name" name="family_name" type="text" placeholder="Фамилия *">
     </div>
     <div class="label_block">
         <label for="input_first_name">Имя</label>
     </div>
     <div class="input_block">
-        <input id="input_first_name" class="new_contact_text_input" name="name" type="text" placeholder="Имя *"
-               required>
+        <input id="input_first_name" name="name" type="text" placeholder="Имя *">
     </div>
     <div class="label_block">
         <label for="input_phone">Номер телефона</label>
     </div>
     <div class="input_block">
-        <input id="input_phone" class="new_contact_text_input" name="phone" type="text"
-               placeholder="Номер телефона *" required>
+        <input id="input_phone" name="phone" type="text" placeholder="Номер телефона *">
     </div>
     <div class="add_button_block">
         <button id="add_button" class="with_bottom_margin" type="button">Добавить контакт</button>
@@ -43,9 +40,9 @@
 <hr>
 <div class="phonebook_table_block">
     <h2 class="header">Контакты</h2>
-    <table class="phonebook_table">
-        <thead class="phonebook_thead">
-        <tr class="phonebook_title_row">
+    <table>
+        <thead>
+        <tr>
             <th class="phonebook_contact_number">№</th>
             <th class="phonebook_last_name">Фамилия</th>
             <th class="phonebook_first_name">Имя</th>
@@ -53,8 +50,8 @@
             <th class="phonebook_delete_column"></th>
         </tr>
         </thead>
-        <tbody class="phonebook_tbody">
-        <tr class="phonebook_normal_row phonebook_empty_row">
+        <tbody>
+        <tr class="phonebook_contact_row phonebook_empty_row">
             <td></td>
             <td></td>
             <td></td>
