@@ -7,7 +7,7 @@
     font-size: 22px;
 }
 
-.employees_table > tbody > tr > td, .employees_table > thead > tr > th {
+.employees_table td, .employees_table th {
     border: 1px solid #cfcfcf;
     padding: 14px 11px;
 }
@@ -16,7 +16,7 @@
     background-color: #eee;
 }
 
-.employees_title_row {
+.employees_table thead tr {
     color: #fff;
     background-color: #3498db;
 }
