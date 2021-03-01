@@ -58,5 +58,5 @@ $(document).ready(function () {
         list.prepend(listItem);
         inputTextField.val("");
         errorMessageBlock.text("");
-    })
+    });
 });
