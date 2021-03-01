@@ -10,7 +10,7 @@ body {
     box-sizing: border-box;
 }
 
-.header {
+.main_block > h1 {
     font-size: 30px;
     text-align: center;
 }
@@ -19,7 +19,7 @@ body {
     margin: 20px;
 }
 
-.main_block > div > input {
+.main_block input {
     height: 24px;
     width: 750px;
     font-size: 19px;
@@ -30,13 +30,13 @@ body {
     margin: auto;
 }
 
-.button_block > button {
+.button_block button {
     height: 30px;
     width: 100%;
     font-size: 22px;
 }
 
-.button_block > button:hover {
+.button_block button:hover {
     cursor: pointer;
 }
 
