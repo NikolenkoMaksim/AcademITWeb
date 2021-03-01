@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var errorMessageBlock = document.querySelector(".error_message_block");
     var list = document.getElementById("todo_list")
 
-
     document.getElementById("add_button").addEventListener("click", function () {
         var noteText = inputTextField.value;
 
@@ -62,5 +61,5 @@ document.addEventListener("DOMContentLoaded", function () {
         list.prepend(listItem);
         inputTextField.value = "";
         errorMessageBlock.textContent = "";
-    })
+    });
 });

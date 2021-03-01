@@ -6,6 +6,9 @@ body {
     max-width: 1200px;
     margin: auto;
     font-size: 22px;
+}
+
+* {
     box-sizing: border-box;
 }
 
@@ -18,10 +21,9 @@ body {
     padding: 25px 15px 10px;
 }
 
-.main_block > div > input {
+.input_field_block input {
     height: 30px;
     width: 100%;
-    box-sizing: border-box;
 }
 
 .button_block {
@@ -29,14 +31,18 @@ body {
     margin: auto;
 }
 
-.main_block > div > button {
+.main_block button {
+    margin-left: 10px;
+}
+
+.main_block button:hover {
+    cursor: pointer;
+}
+
+.button_block button {
     height: 30px;
     width: 100%;
     margin: auto;
-}
-
-.main_block > div > button:hover {
-    cursor: pointer;
 }
 
 .input_label, .output_text_block, .error_message_block {
@@ -45,32 +51,17 @@ body {
 
 .error_message_block {
     color: #f00;
-    padding-left: 0;
+    padding: 10px 0 15px;
 }
 
 .main_block > ul {
     margin-top: 20px;
+    padding: 0 20px;
 }
 
-.main_block > ul > li {
+.main_block li {
     width: 100%;
     margin: 20px;
-}
-
-.main_block > ul > li > button, .main_block > ul > li > div > button {
-    margin-left: 10px;
-}
-
-.main_block > ul > li > button:hover, .main_block > ul > li > div > button:hover {
-    cursor: pointer;
-}
-
-.edit_text {
-    width: 858px;
-}
-
-.error_message_block {
-    padding: 10px 15px 15px;
 }
 
 .empty_block {
