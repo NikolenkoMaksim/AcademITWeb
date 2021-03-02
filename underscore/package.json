@@ -1,0 +1,23 @@
+{
+  "name": "underscore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "underscore_script.js",
+  "dependencies": {
+    "underscore": "^1.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikolenkoMaksim/AcademITWeb.git"
+  },
+  "author": "Nikolenko Maksim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikolenkoMaksim/AcademITWeb/issues"
+  },
+  "homepage": "https://github.com/NikolenkoMaksim/AcademITWeb#readme"
+}

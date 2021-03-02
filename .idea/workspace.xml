@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e9e80c8-522f-4a19-b014-971768528a2e" name="Default Changelist" comment="" />
+    <list default="true" id="1e9e80c8-522f-4a19-b014-971768528a2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/underscore/underscore_script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/underscore/underscrore_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,8 +14,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -41,7 +45,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/todo_list_jQuery" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/todo_list_jquery/todo_list_css" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -54,18 +58,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Documents\IdeaProjects\AcademITWeb\todo_list_jquery\todo_list_css" />
       <recent name="C:\Documents\IdeaProjects\AcademITWeb\todo_list_jQuery" />
+      <recent name="C:\Documents\IdeaProjects\AcademITWeb\css_form" />
       <recent name="C:\Documents\IdeaProjects\AcademITWeb\telephoneBook" />
       <recent name="C:\Documents\IdeaProjects\AcademITWeb\css_text" />
-      <recent name="C:\Documents\IdeaProjects\AcademITWeb\temperature_converter" />
-      <recent name="C:\Documents\IdeaProjects\AcademITWeb\css_table" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Documents\IdeaProjects\AcademITWeb\todo_list_jquery\todo_list_js" />
+      <recent name="C:\Documents\IdeaProjects\AcademITWeb\todo_list\todo_list_css" />
+      <recent name="C:\Documents\IdeaProjects\AcademITWeb\phoneBook\phoneBook_js" />
+      <recent name="C:\Documents\IdeaProjects\AcademITWeb\temperature_converter\temperature_converter_css" />
       <recent name="C:\Documents\IdeaProjects\AcademITWeb\phoneBook\phonebook_css" />
-      <recent name="C:\Documents\IdeaProjects\AcademITWeb\phoneBook\phonebook_js" />
-      <recent name="C:\Documents\IdeaProjects\AcademITWeb\resources" />
-      <recent name="C:\Documents\IdeaProjects\AcademITWeb\libs" />
-      <recent name="C:\Documents\IdeaProjects\AcademITWeb" />
     </key>
   </component>
   <component name="RunManager">
@@ -98,7 +102,9 @@
       <workItem from="1612268796687" duration="1766000" />
       <workItem from="1613141642161" duration="38892000" />
       <workItem from="1613317177746" duration="77041000" />
-      <workItem from="1614263775960" duration="32182000" />
+      <workItem from="1614263775960" duration="61842000" />
+      <workItem from="1614697610925" duration="1162000" />
+      <workItem from="1614698822403" duration="11747000" />
     </task>
     <task id="LOCAL-00001" summary="Задача HTML выполнена">
       <created>1611494159420</created>
@@ -289,7 +295,147 @@
       <option name="project" value="LOCAL" />
       <updated>1614450810979</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Выполнена задача phoneBook со 1м и 2м усложнением">
+      <created>1614451305925</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1614451305925</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Исправлена опечатка">
+      <created>1614506310253</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1614506310254</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Исправлены замечания по задаче CSS Table">
+      <created>1614507410092</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1614507410092</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Исправлены замечания по задаче CSS Form">
+      <created>1614518761199</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1614518761199</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Исправлены замечания по задаче Temperature Converter">
+      <created>1614524392125</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1614524392125</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Перенесен файл phoneBookScript.js">
+      <created>1614524514593</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1614524514593</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Исправлены замечания по задаче Temperature Converter">
+      <created>1614524747483</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1614524747483</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Внесены изменения с учетом замечаний по другим задачам">
+      <created>1614529503371</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1614529503372</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Внесены изменения в задачу Todo List jQuery, учитывающие замечания по другим задачам">
+      <created>1614530315930</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1614530315930</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Внесены изменения в задачу phoneBook, учитывающие замечания по другим задачам">
+      <created>1614612382926</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1614612382926</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Исправлены замечания по задаче css_form">
+      <created>1614612561209</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1614612561209</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Исправлены замечания по задаче css_table">
+      <created>1614612870512</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1614612870512</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Исправлены замечания по задаче css_table">
+      <created>1614613051945</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1614613051945</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Исправлены замечания по задаче css_table">
+      <created>1614613094994</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1614613094994</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Убран класс header">
+      <created>1614613476689</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1614613476689</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Испарвлены замечания по задача css_form">
+      <created>1614613749433</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1614613749433</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Испарвлены замечания по задача todo_list">
+      <created>1614625198860</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1614625198861</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Испарвлены замечания по задача todo_list_jquery">
+      <created>1614625367632</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1614625367632</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Первая работа с npm">
+      <created>1614698751763</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1614698751763</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Исправлено название .gitignore">
+      <created>1614699012308</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1614699012308</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,9 +454,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Задача HTML выполнена" />
-    <MESSAGE value="Добавлены изменения" />
-    <MESSAGE value="Выполнены задачи по CSS" />
     <MESSAGE value="Выполнена задача" />
     <MESSAGE value="Выполнена задача &quot;Перевод температур&quot;" />
     <MESSAGE value="Выполнена задача TODO List jQuery" />
@@ -320,6 +463,22 @@
     <MESSAGE value="Исправлены замечания" />
     <MESSAGE value="Внесены дополнение" />
     <MESSAGE value="Выполнена задача phoneBook со 1м и 2м усложнением" />
-    <option name="LAST_COMMIT_MESSAGE" value="Выполнена задача phoneBook со 1м и 2м усложнением" />
+    <MESSAGE value="Исправлена опечатка" />
+    <MESSAGE value="Исправлены замечания по задаче CSS Table" />
+    <MESSAGE value="Исправлены замечания по задаче CSS Form" />
+    <MESSAGE value="Перенесен файл phoneBookScript.js" />
+    <MESSAGE value="Исправлены замечания по задаче Temperature Converter" />
+    <MESSAGE value="Внесены изменения с учетом замечаний по другим задачам" />
+    <MESSAGE value="Внесены изменения в задачу Todo List jQuery, учитывающие замечания по другим задачам" />
+    <MESSAGE value="Внесены изменения в задачу phoneBook, учитывающие замечания по другим задачам" />
+    <MESSAGE value="Исправлены замечания по задаче css_form" />
+    <MESSAGE value="Исправлены замечания по задаче css_table" />
+    <MESSAGE value="Убран класс header" />
+    <MESSAGE value="Испарвлены замечания по задача css_form" />
+    <MESSAGE value="Испарвлены замечания по задача todo_list" />
+    <MESSAGE value="Испарвлены замечания по задача todo_list_jquery" />
+    <MESSAGE value="Первая работа с npm" />
+    <MESSAGE value="Исправлено название .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлено название .gitignore" />
   </component>
 </project>
