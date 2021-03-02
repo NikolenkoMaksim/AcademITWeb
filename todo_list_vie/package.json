@@ -1,0 +1,22 @@
+{
+  "name": "todo_list_vie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikolenkoMaksim/AcademITWeb.git"
+  },
+  "author": "Nikolenko_Maksim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikolenkoMaksim/AcademITWeb/issues"
+  },
+  "homepage": "https://github.com/NikolenkoMaksim/AcademITWeb#readme",
+  "dependencies": {
+    "vue": "^2.6.12"
+  }
+}
