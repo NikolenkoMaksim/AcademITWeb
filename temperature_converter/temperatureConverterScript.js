@@ -25,5 +25,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
         outputTextBlock.textContent = inputText + "° Цельсия = " + parseFloat(temperatureInKelvin.toFixed(3)) +
             "° Кельвина = " + parseFloat(temperatureInFahrenheit.toFixed(3)) + "° Фаренгейта";
-    })
+    });
 });
