@@ -8,53 +8,51 @@ $(document).ready(function () {
     $("#add_button").click(function () {
         var errorMessage;
 
-        if (lastNameInput.val() === "") {
-            errorMessage = "Необходимо заполнить поле \"Фамилия\"";
-            lastNameInput.parent().addClass("unvalidated");
+        if (lastNameInput.val() !== "") {
+            lastNameInput.removeClass("invalid");
         } else {
-            lastNameInput.parent().removeClass("unvalidated");
+            errorMessage = "Необходимо заполнить поле \"Фамилия\"";
+            lastNameInput.addClass("invalid");
         }
 
-        if (firstNameInput.val() === "") {
+        if (firstNameInput.val() !== "") {
+            firstNameInput.removeClass("invalid");
+        } else {
             if (errorMessage === undefined) {
                 errorMessage = "Необходимо заполнить поле \"Имя\"";
             } else {
                 errorMessage += ", поле  \"Имя\"";
             }
 
-            firstNameInput.parent().addClass("unvalidated");
-        } else {
-            firstNameInput.parent().removeClass("unvalidated");
+            firstNameInput.addClass("invalid");
         }
 
-        if (phoneInput.val() === "") {
+        if (phoneInput.val() !== "") {
+            phoneInput.removeClass("invalid");
+        } else {
             if (errorMessage === undefined) {
                 errorMessage = "Необходимо заполнить поле \"Номер телефона\"";
             } else {
                 errorMessage += ", поле \"Номер телефона\"";
             }
 
-            phoneInput.parent().addClass("unvalidated");
-        } else {
-            phoneInput.parent().removeClass("unvalidated")
+            phoneInput.addClass("invalid");
         }
 
         if (errorMessage === undefined) {
             $(".phonebook_phone").not("th").each(function () {
                 if ($(this).text() === phoneInput.val()) {
                     errorMessage = "Контакт с таким номером уже существует";
+                    return false;
                 }
             });
         }
 
-        if (errorMessage !== undefined) {
-            $(".error_message_block").text(errorMessage);
-            $("#add_button").removeClass("with_bottom_margin");
-
-            return;
-        } else {
+        if (errorMessage === undefined) {
             $(".error_message_block").text("");
-            $("#add_button").addClass("with_bottom_margin");
+        } else {
+            $(".error_message_block").text(errorMessage);
+            return;
         }
 
         $(".phonebook_empty_row").hide();
@@ -80,12 +78,12 @@ $(document).ready(function () {
 
             tableRow.find(".phonebook_delete_column").click(function () {
                 $.confirm({
-                    'title': 'Подтверждение удаления',
-                    'message': 'После удаления контакт нельзя будет восстановить. <br> Продолжить удаление?',
-                    'buttons': {
+                    title: 'Подтверждение удаления',
+                    message: 'После удаления контакт нельзя будет восстановить. <br> Продолжить удаление?',
+                    buttons: {
                         'Да': {
-                            'class': 'blue',
-                            'action': function () {
+                            class: "blue",
+                            action: function () {
                                 tableRow.remove();
                                 contactsCount--;
 
@@ -99,8 +97,8 @@ $(document).ready(function () {
                             }
                         },
                         'Нет': {
-                            'class': 'gray',
-                            'action': function () {
+                            class: "gray",
+                            action: function () {
                             }
                         }
                     }

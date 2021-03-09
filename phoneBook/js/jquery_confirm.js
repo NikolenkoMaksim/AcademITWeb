@@ -33,10 +33,6 @@
 
         $.each(params.buttons, function (name, obj) {
             buttons.eq(i++).click(function () {
-
-                // Когда на кнопку нажимают, вызываем функцию действия
-                // и закрываем диалог подтверждения.
-
                 obj.action();
                 $.confirm.hide();
                 return false;

@@ -32,7 +32,7 @@ body {
     padding-left: 10px;
     margin-top: 6px;
     margin-bottom: 7px;
-    font-weight: 750;
+    font-weight: 700;
     font-size: 16px;
 }
 
@@ -43,7 +43,7 @@ body {
 }
 
 .input_block > input {
-    border: none;
+    border: 2px solid #a8f3f3;
     font-size: 16px;
     width: 100%;
     font-weight: 500;
@@ -66,24 +66,21 @@ body {
     vertical-align: bottom;
 }
 
-.with_bottom_margin {
-    margin-bottom: 40px;
-}
-
 .add_button_block > button:hover {
     background-color: #32728d;
     cursor: pointer;
 }
 
-.unvalidated {
-    background-color: #ff1934;
+.input_block .invalid {
+    border: 2px solid #ff1934;
 }
 
 .error_message_block {
     font-size: 18px;
-    font-weight: 650;
+    font-weight: 600;
     color: #f00;
     margin-top: 20px;
+    height: 30px;
 }
 
 .phonebook_table_block {

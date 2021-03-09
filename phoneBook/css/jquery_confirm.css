@@ -23,8 +23,10 @@
 #confirmBox h1, #confirmBox p {
     font: 26px/1 "Arial", serif;
     background: repeat-x left bottom #3498db;
-    padding: 18px 25px;
+    padding: 8px 25px;
     color: #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #confirmBox h1 {
@@ -39,7 +41,7 @@
 }
 
 #confirmButtons {
-    padding: 15px 0 25px;
+    padding: 0 0 20px;
     text-align: center;
 }
 
@@ -63,7 +65,7 @@
 
 #confirmBox .blue {
     background-position: left top;
-    background-color: #60a3e3;
+    background-color: #3498db;
 }
 
 #confirmBox .blue:hover {
