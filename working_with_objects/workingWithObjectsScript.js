@@ -1,66 +1,66 @@
-var countries = [
-    {
-        name: "Federative Republic of Brazil",
-        cities: [
-            {name: "Sao Paulo", population: 12106920},
-            {name: "Rio de Janeiro", population: 6688930},
-            {name: "Brasilia", population: 2609997}
-        ]
-    },
-    {
-        name: "Thailand",
-        cities: [
-            {name: "Bangkok", population: 5676648},
-            {name: "Nonthaburi", population: 266930},
-        ]
-    },
-    {
-        name: "Russian Federation",
-        cities: [
-            {name: "Moscow", population: 12678079},
-            {name: "Saint Petersburg", population: 5390641},
-            {name: "Novosibirsk", population: 1625631}
-        ]
-    }
-];
-
-console.log("Countries names with max cities count:");
-console.log(countries);
-
-function getCountriesNamesWithMaxCitiesCount(countries) {
-    var maxCitiesCount = 0;
-    var countriesWithMaxCitiesCountNames = [];
-
-    countries.forEach(function (item, i, countries) {
-        if (countries[i].cities.length > maxCitiesCount) {
-            countriesWithMaxCitiesCountNames = [countries[i].name];
-            maxCitiesCount = countries[i].cities.length;
-        } else if (countries[i].cities.length === maxCitiesCount) {
-            countriesWithMaxCitiesCountNames.push(countries[i].name);
+(function () {
+    var countries = [
+        {
+            name: "Federative Republic of Brazil",
+            cities: [
+                {name: "Sao Paulo", population: 12106920},
+                {name: "Rio de Janeiro", population: 6688930},
+                {name: "Brasilia", population: 2609997}
+            ]
+        },
+        {
+            name: "Thailand",
+            cities: [
+                {name: "Bangkok", population: 5676648},
+                {name: "Nonthaburi", population: 266930},
+            ]
+        },
+        {
+            name: "Russian Federation",
+            cities: [
+                {name: "Moscow", population: 12678079},
+                {name: "Saint Petersburg", population: 5390641},
+                {name: "Novosibirsk", population: 1625631}
+            ]
         }
-    })
+    ];
 
-    return countriesWithMaxCitiesCountNames;
-}
+    console.log("Countries names with max cities count:");
+    console.log(countries);
 
-console.log(getCountriesNamesWithMaxCitiesCount(countries));
+    function getMaxCitiesCountCountries(countries) {
+        var maxCitiesCount = 0;
+        var maxCitiesCountCountries = [];
 
-function getObjectWithCountriesAndPopulation(countries) {
-    var countriesPopulation = {};
+        countries.forEach(function (item, i, countries) {
+            if (countries[i].cities.length > maxCitiesCount) {
+                maxCitiesCountCountries = [countries[i]];
+                maxCitiesCount = countries[i].cities.length;
+            } else if (countries[i].cities.length === maxCitiesCount) {
+                maxCitiesCountCountries.push(countries[i]);
+            }
+        })
 
-    function getCountriesPopulation(country) {
-        return country.cities.reduce(function (accumulator, currentElement) {
-            return accumulator + currentElement.population;
-        }, 0);
+        return maxCitiesCountCountries;
     }
 
-    countries.forEach(function (item, i, countries) {
-        countriesPopulation[countries[i].name] = getCountriesPopulation(countries[i]);
-    });
+    console.log(getMaxCitiesCountCountries(countries));
 
-    return countriesPopulation;
-}
+    function getCountriesPopulations(countries) {
+        var countriesPopulations = {};
 
-var countriesPopulation = getObjectWithCountriesAndPopulation(countries);
+        function getCountryPopulation(country) {
+            return country.cities.reduce(function (countryPopulation, city) {
+                return countryPopulation + city.population;
+            }, 0);
+        }
 
-console.log(countriesPopulation);
+        countries.forEach(function (country) {
+            countriesPopulations[country.name] = getCountryPopulation(country);
+        });
+
+        return countriesPopulations;
+    }
+
+    console.log(getCountriesPopulations(countries));
+})();
