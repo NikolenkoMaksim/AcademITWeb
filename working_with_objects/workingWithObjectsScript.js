@@ -32,14 +32,14 @@
         var maxCitiesCount = 0;
         var maxCitiesCountCountries = [];
 
-        countries.forEach(function (item, i, countries) {
-            if (countries[i].cities.length > maxCitiesCount) {
-                maxCitiesCountCountries = [countries[i]];
-                maxCitiesCount = countries[i].cities.length;
-            } else if (countries[i].cities.length === maxCitiesCount) {
-                maxCitiesCountCountries.push(countries[i]);
+        countries.forEach(function (country) {
+            if (country.cities.length > maxCitiesCount) {
+                maxCitiesCountCountries = [country];
+                maxCitiesCount = country.cities.length;
+            } else if (country.cities.length === maxCitiesCount) {
+                maxCitiesCountCountries.push(country);
             }
-        })
+        });
 
         return maxCitiesCountCountries;
     }
