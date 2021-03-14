@@ -4,7 +4,8 @@ new Vue({
     data: {
         notes: [],
         newNoteText: "",
-        newId: 1
+        newId: 1,
+        isInvalidInput: false
     },
 
     methods: {
@@ -12,16 +13,17 @@ new Vue({
             var text = this.newNoteText;
 
             if (text.trim() === "") {
-                $("#input_text_field").addClass("is-invalid");
+                this.isInvalidInput = true;
                 return;
             }
 
-            $("#input_text_field").removeClass("is-invalid");
+            this.isInvalidInput = false;
 
             this.notes.push({
                 id: this.newId,
                 text: text,
                 isEditing: false,
+                isInvalid: false,
                 editText: text
             });
 
@@ -41,16 +43,17 @@ new Vue({
 
         stopEditNote: function (note) {
             note.isEditing = false;
+            note.isInvalid = false;
             note.editText = note.text;
         },
 
         saveNote: function (note) {
             if (note.editText === "") {
-                $(".edit_text").addClass("is-invalid");
+                note.isInvalid = true;
                 return;
             }
 
-            $(".edit_text").removeClass("is-invalid");
+            note.isInvalid = false;
 
             note.isEditing = false;
             note.text = note.editText;

@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e9e80c8-522f-4a19-b014-971768528a2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/todo_list_vue/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo_list_vue/todo_list_vue.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo_list_vue/todo_list_vue_script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo_list_vue/todo_list_vue_style.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/todo_list_vue_one_component/todo_list_vue.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo_list_vue_one_component/todo_list_vue_script.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/todo_list_vue_one_component/todo_list_vue_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_list_vie/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_list_vie/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/todo_list_vue/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_list_vie/todo_list_vie.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo_list_vue_one_component/todo_list_vue_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/todo_list_vue_one_component/todo_list_vue_script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,21 +106,7 @@
       <workItem from="1613317177746" duration="77041000" />
       <workItem from="1614263775960" duration="61842000" />
       <workItem from="1614697610925" duration="1162000" />
-      <workItem from="1614698822403" duration="78004000" />
-    </task>
-    <task id="LOCAL-00012" summary="Выполнена задача &quot;Перевод температур&quot;">
-      <created>1613661496063</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1613661496064</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Исправлены замечания">
-      <created>1613893014842</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1613893014842</updated>
+      <workItem from="1614698822403" duration="80596000" />
     </task>
     <task id="LOCAL-00014" summary="Выполнена задача TODO List jQuery">
       <created>1613934881401</created>
@@ -458,7 +437,21 @@
       <option name="project" value="LOCAL" />
       <updated>1615737567081</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Выполнена задача &quot;Todo_List_Vue&quot; путем использования нескольких компонент">
+      <created>1615739190602</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1615739190603</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Выполнена задача &quot;Todo_List_Vue&quot; путем использования нескольких компонент">
+      <created>1615739724183</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1615739724183</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,7 +470,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Исправлены замечания по задаче CSS Table" />
     <MESSAGE value="Исправлены замечания по задаче CSS Form" />
     <MESSAGE value="Перенесен файл phoneBookScript.js" />
     <MESSAGE value="Исправлены замечания по задаче Temperature Converter" />
@@ -502,6 +494,7 @@
     <MESSAGE value="Исправлены замечания по задаче &quot;Работа с массивами&quot;" />
     <MESSAGE value="Исправлены замечания по задаче &quot;Работа с объектами&quot;" />
     <MESSAGE value="Исправлены замечания по задаче &quot;Underscore&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлены замечания по задаче &quot;Underscore&quot;" />
+    <MESSAGE value="Выполнена задача &quot;Todo_List_Vue&quot; путем использования нескольких компонент" />
+    <option name="LAST_COMMIT_MESSAGE" value="Выполнена задача &quot;Todo_List_Vue&quot; путем использования нескольких компонент" />
   </component>
 </project>

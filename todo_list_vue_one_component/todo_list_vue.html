@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Спислк дел Vie</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="todo_list_vue_style.css">
+    <script defer src="node_modules/jquery/dist/jquery.js"></script>
+    <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script defer src="node_modules/vue/dist/vue.min.js"></script>
+    <script defer src="todo_list_vue_script.js"></script>
+</head>
+<body>
+<div v-cloak id="app" class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="h2 text-center m-3">Список дел</h1>
+            <div class="form-group mb-2">
+                <template v-if="isInvalidInput">
+                    <label for="input_text_field_invalid">Введите новую заметку</label>
+                    <input v-model="newNoteText" type="text" class="form-control is-invalid"
+                           id="input_text_field_invalid" maxlength="60" placeholder="Введите новую заметку">
+                    <div class="invalid-feedback mt-2 mb-2">Пожалуйста, заполните поле ввода</div>
+                </template>
+                <template v-else>
+                    <label for="input_text_field">Введите новую заметку</label>
+                    <input v-model="newNoteText" type="text" class="form-control" id="input_text_field" maxlength="60"
+                           placeholder="Введите новую заметку">
+                </template>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center">
+            <button @click="addNewNote" type="button" class="add_button btn btn-primary m-3" aria-pressed="true">
+                Добавить
+            </button>
+        </div>
+    </div>
+
+    <div class="row" v-for="note in notes" :key="note.id">
+        <template v-if="note.isEditing">
+            <div class="col mb-2">
+                <template v-if="note.isInvalid">
+                    <input v-model="note.editText" class="edit_text form-control is-invalid" type="text" maxlength='60'>
+                    <div class="invalid-feedback">Пожалуйста, заполните поле ввода</div>
+                </template>
+                <template v-else>
+                    <input v-model="note.editText" class="edit_text form-control" type="text" maxlength='60'>
+                </template>
+            </div>
+            <div class="col-md-auto pl-0 mb-2">
+                <button @click="saveNote(note)" class="btn btn-primary" type="button">Сохранить</button>
+                <button @click="stopEditNote(note)" class="btn btn-secondary" type="button">Закрыть</button>
+            </div>
+        </template>
+        <template v-else>
+            <div class="col-auto pr-0 mb-2">●</div>
+            <div class="col mb-2"><span class="note_text">{{note.text}}</span></div>
+            <div class="col-md-auto pl-0 ml-auto mb-2">
+                <button @click="startEditNote(note)" class="btn btn-primary" type="button">
+                    Редактировать
+                </button>
+                <button @click="deleteNote(note)" class="btn btn-secondary" type="button">
+                    Удалить
+                </button>
+            </div>
+        </template>
+    </div>
+</div>
+</body>
+</html>
