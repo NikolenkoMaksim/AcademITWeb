@@ -81,7 +81,7 @@ $(document).ready(function () {
                     title: 'Подтверждение удаления',
                     message: 'После удаления контакт нельзя будет восстановить. <br> Продолжить удаление?',
                     buttons: {
-                        'Да': {
+                        "Да": {
                             class: "blue",
                             action: function () {
                                 tableRow.remove();
@@ -96,7 +96,7 @@ $(document).ready(function () {
                                 })
                             }
                         },
-                        'Нет': {
+                        "Нет": {
                             class: "gray",
                             action: function () {
                             }
