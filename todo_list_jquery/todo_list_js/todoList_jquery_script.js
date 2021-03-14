@@ -3,7 +3,6 @@ $(document).ready(function () {
     var errorMessageBlock = $(".error_message_block");
     var list = $("#todo_list")
 
-
     $("#add_button").click(function () {
         var noteText = inputTextField.val();
 
