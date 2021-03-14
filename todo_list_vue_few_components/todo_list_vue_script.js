@@ -23,6 +23,7 @@ Vue.component("todo-list-note", {
         },
 
         stopEditNote: function () {
+            this.isInvalid = false;
             this.isEditing = false;
         },
 
