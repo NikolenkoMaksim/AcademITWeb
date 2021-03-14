@@ -50,7 +50,7 @@
     function getEvenNumbersSquares(array) {
         return array.filter(function (number) {
             return number % 2 === 0;
-        }).map(function squareNumbers(currentValue) {
+        }).map(function (currentValue) {
             return currentValue * currentValue;
         });
     }
