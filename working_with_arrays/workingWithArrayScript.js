@@ -48,7 +48,7 @@
     console.log(fillArrayWithNumbers(array4, 1, 100));
 
     function getEvenNumbersSquares(array) {
-        return array.filter(function selectEvenNumbers(number) {
+        return array.filter(function (number) {
             return number % 2 === 0;
         }).map(function squareNumbers(currentValue) {
             return currentValue * currentValue;
