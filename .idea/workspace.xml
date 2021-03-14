@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e9e80c8-522f-4a19-b014-971768528a2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/todo_list_vue/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo_list_vue/todo_list_vue.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo_list_vue/todo_list_vue_script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo_list_vue/todo_list_vue_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo_list_vue_one_component/todo_list_vue.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo_list_vue_one_component/todo_list_vue_script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo_list_vue_one_component/todo_list_vue_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temperature_converter/temperatureConverterScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/temperature_converter/temperatureConverterScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working_with_arrays/workingWithArrayScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/working_with_arrays/workingWithArrayScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo_list_vie/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo_list_vie/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/todo_list_vue/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo_list_vie/todo_list_vie.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -45,7 +53,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/todo_list_jquery/todo_list_css" />
+    <property name="jdk.selected.JAVA_MODULE" value="14" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/todo_list_vue" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -58,11 +67,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Documents\IdeaProjects\AcademITWeb\todo_list_vue" />
+      <recent name="C:\Documents\IdeaProjects\AcademITWeb\todo_list_vue\node_modules" />
+      <recent name="C:\Documents\IdeaProjects\AcademITWeb\todo_list_vue_one_component" />
       <recent name="C:\Documents\IdeaProjects\AcademITWeb\todo_list_jquery\todo_list_css" />
       <recent name="C:\Documents\IdeaProjects\AcademITWeb\todo_list_jQuery" />
-      <recent name="C:\Documents\IdeaProjects\AcademITWeb\css_form" />
-      <recent name="C:\Documents\IdeaProjects\AcademITWeb\telephoneBook" />
-      <recent name="C:\Documents\IdeaProjects\AcademITWeb\css_text" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Documents\IdeaProjects\AcademITWeb\todo_list_jquery\todo_list_js" />
@@ -104,84 +113,7 @@
       <workItem from="1613317177746" duration="77041000" />
       <workItem from="1614263775960" duration="61842000" />
       <workItem from="1614697610925" duration="1162000" />
-      <workItem from="1614698822403" duration="17721000" />
-    </task>
-    <task id="LOCAL-00001" summary="Задача HTML выполнена">
-      <created>1611494159420</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1611494159420</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Задача HTML выполнена">
-      <created>1611494484845</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1611494484845</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Добавлены изменения">
-      <created>1611671775597</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1611671775597</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Добавлены изменения">
-      <created>1611671818617</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1611671818617</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Исправлены замечания">
-      <created>1613144997214</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1613144997214</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Исправлены замечания">
-      <created>1613145143612</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1613145143612</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Выполнены задачи по CSS">
-      <created>1613294192803</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1613294192803</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Выполнены задачи по CSS">
-      <created>1613294255978</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1613294255978</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Выполнена задача">
-      <created>1613418886960</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1613418886961</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Выполнена задача">
-      <created>1613418906002</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1613418906002</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Внесены правки">
-      <created>1613487060665</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1613487060665</updated>
+      <workItem from="1614698822403" duration="78004000" />
     </task>
     <task id="LOCAL-00012" summary="Выполнена задача &quot;Перевод температур&quot;">
       <created>1613661496063</created>
@@ -442,7 +374,91 @@
       <option name="project" value="LOCAL" />
       <updated>1614718235352</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Исправлены замечания по задаче &quot;Работа с массивами&quot;">
+      <created>1615261329021</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1615261329022</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Исправлены замечания по задаче &quot;Работа с объектами&quot;">
+      <created>1615263829243</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1615263829245</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Исправлены замечания по задаче &quot;СSS Форма&quot;">
+      <created>1615268934058</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1615268934058</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Исправлены замечания по задаче &quot;Temperature converter&quot;">
+      <created>1615269069144</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1615269069144</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Исправлены замечания по задаче &quot;Phone book jQuery&quot;">
+      <created>1615274477171</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1615274477171</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Исправлены замечания по задаче &quot;Todo list jQuery&quot;">
+      <created>1615730483045</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1615730483048</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Исправлены замечания по задаче &quot;CSS Form&quot;">
+      <created>1615730705390</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1615730705390</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Исправлены замечания по задаче &quot;PhoneBook jQuery&quot;">
+      <created>1615730840315</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1615730840316</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Исправлены замечания по задаче &quot;Работа с массивами&quot;">
+      <created>1615731276663</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1615731276663</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Исправлены замечания по задаче &quot;Работа с массивами&quot;">
+      <created>1615731396346</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1615731396346</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Исправлены замечания по задаче &quot;Работа с объектами&quot;">
+      <created>1615736296043</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1615736296044</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Исправлены замечания по задаче &quot;Underscore&quot;">
+      <created>1615737567080</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1615737567081</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,15 +477,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Выполнена задача &quot;Перевод температур&quot;" />
-    <MESSAGE value="Выполнена задача TODO List jQuery" />
-    <MESSAGE value="Выполнена задача TODO List" />
-    <MESSAGE value="Внесены дополнения" />
-    <MESSAGE value="Внесены правки" />
-    <MESSAGE value="Исправлены замечания" />
-    <MESSAGE value="Внесены дополнение" />
-    <MESSAGE value="Выполнена задача phoneBook со 1м и 2м усложнением" />
-    <MESSAGE value="Исправлена опечатка" />
     <MESSAGE value="Исправлены замечания по задаче CSS Table" />
     <MESSAGE value="Исправлены замечания по задаче CSS Form" />
     <MESSAGE value="Перенесен файл phoneBookScript.js" />
@@ -486,6 +493,15 @@
     <MESSAGE value="Первая работа с npm" />
     <MESSAGE value="Исправлено название .gitignore" />
     <MESSAGE value="Выполнена задача Underscore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Выполнена задача Underscore" />
+    <MESSAGE value="Исправлены замечания по задаче &quot;СSS Форма&quot;" />
+    <MESSAGE value="Исправлены замечания по задаче &quot;Temperature converter&quot;" />
+    <MESSAGE value="Исправлены замечания по задаче &quot;Phone book jQuery&quot;" />
+    <MESSAGE value="Исправлены замечания по задаче &quot;Todo list jQuery&quot;" />
+    <MESSAGE value="Исправлены замечания по задаче &quot;CSS Form&quot;" />
+    <MESSAGE value="Исправлены замечания по задаче &quot;PhoneBook jQuery&quot;" />
+    <MESSAGE value="Исправлены замечания по задаче &quot;Работа с массивами&quot;" />
+    <MESSAGE value="Исправлены замечания по задаче &quot;Работа с объектами&quot;" />
+    <MESSAGE value="Исправлены замечания по задаче &quot;Underscore&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлены замечания по задаче &quot;Underscore&quot;" />
   </component>
 </project>

@@ -1,0 +1,11 @@
+body {
+    background-color: #e0ffff;
+}
+
+.container {
+    font-size: 22px;
+}
+
+.form-control, .btn {
+    font-size: 20px;
+}
