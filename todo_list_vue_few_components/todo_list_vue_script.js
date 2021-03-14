@@ -50,7 +50,8 @@ Vue.component("todo-list", {
         return {
             notes: [],
             newNoteText: "",
-            newId: 1
+            newId: 1,
+            isInvalidInput: false
         };
     },
 
@@ -61,11 +62,11 @@ Vue.component("todo-list", {
             var text = this.newNoteText;
 
             if (text.trim() === "") {
-                $("#input_text_field").addClass("is-invalid");
+                this.isInvalidInput = true;
                 return;
             }
 
-            $("#input_text_field").removeClass("is-invalid");
+            this.isInvalidInput = false;
 
             this.notes.push({
                 id: this.newId,

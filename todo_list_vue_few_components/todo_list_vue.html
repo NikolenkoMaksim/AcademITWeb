@@ -24,10 +24,18 @@
             <div class="col">
                 <h1 class="h2 text-center m-3">Список дел</h1>
                 <div class="form-group mb-2">
-                    <label for="input_text_field">Введите новую заметку</label>
-                    <input v-model="newNoteText" type="text" class="form-control" id="input_text_field" maxlength="60"
-                           placeholder="Введите новую заметку">
-                    <div class="invalid-feedback mt-2 mb-2">Пожалуйста, заполните поле ввода</div>
+                    <template v-if="isInvalidInput">
+                        <label for="input_text_field_invalid">Введите новую заметку</label>
+                        <input v-model="newNoteText" type="text" class="form-control is-invalid"
+                               id="input_text_field_invalid" maxlength="60" placeholder="Введите новую заметку">
+                        <div class="invalid-feedback mt-2 mb-2">Пожалуйста, заполните поле ввода</div>
+                    </template>
+                    <template v-else>
+                        <label for="input_text_field">Введите новую заметку</label>
+                        <input v-model="newNoteText" type="text" class="form-control" id="input_text_field"
+                               maxlength="60"
+                               placeholder="Введите новую заметку">
+                    </template>
                 </div>
             </div>
         </div>
