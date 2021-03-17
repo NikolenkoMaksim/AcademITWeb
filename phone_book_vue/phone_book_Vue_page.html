@@ -11,9 +11,70 @@
     <script defer src="node_modules/jquery/dist/jquery.min.js"></script>
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script defer src="node_modules/vue/dist/vue.min.js"></script>
-    <script defer src="phone_book_vue_style.js"></script>
+    <script defer src="node_modules/underscore/underscore.js"></script>
+    <script defer src="phone_book_vue_script.js"></script>
 </head>
 <body>
-
+<div id="app" class="container" v-cloak>
+    <div class="row">
+        <h1 class="h2 col text-center m-3">Телефонная книга</h1>
+    </div>
+    <template v-for="contact_data_input in contacts_data_inputs" :key="contact_data_input.id">
+        <div class="row mb-2 pl-4">
+            {{contact_data_input.name}}
+        </div>
+        <div class="row mb-2">
+            <div class="col mb-2">
+                <template v-if="contact_data_input.isInvalid">
+                    <input id="contact_data_input.inputId" v-model="contact_data_input.text"
+                           class="form-control is-invalid" type="text" maxlength='60'>
+                    <div class="invalid-feedback">Пожалуйста, заполните поле "{{contact_data_input.name}}"</div>
+                </template>
+                <template v-else>
+                    <input v-model="contact_data_input.text" class="form-control" type="text" maxlength='60'>
+                </template>
+            </div>
+        </div>
+    </template>
+    <div class="row pl-2 mb-2">
+        <div class="col error_message">{{message}}</div>
+    </div>
+    <div class="row">
+        <div class="col text-center">
+            <button @click="addContact" type="button" class="btn btn-primary mt-3 add_button" aria-pressed="true">
+                Добавить контакт
+            </button>
+        </div>
+    </div>
+    <table class="table table-bordered table-sm contacts-table mt-4">
+        <thead class="table-primary">
+        <tr>
+            <th scope="col" class="text-center">№</th>
+            <th scope="col" class="pl-3">Фамилия</th>
+            <th scope="col" class="pl-3">Имя</th>
+            <th scope="col" class="pl-3">Номер телефона</th>
+            <th scope="col" class="pl-3"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <template v-if="contacts.length < 1">
+            <tr>
+                <td scope="row" class="text-center"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="empty-row-delete-cel text-center"></td>
+            </tr>
+        </template>
+        <tr v-for="(contact, index) in contacts" :key="contact.id">
+            <td scope="row" class="text-center pl-2">{{index + 1}}</td>
+            <td class="pl-3">{{contact.lastName}}</td>
+            <td class="pl-3">{{contact.firstName}}</td>
+            <td class="pl-3">{{contact.phoneNumber}}</td>
+            <td @click="deleteContact(contact)" class="text-center delete-cell">X</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>
