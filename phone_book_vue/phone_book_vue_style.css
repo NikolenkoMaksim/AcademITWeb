@@ -38,3 +38,6 @@ body {
     color: #dc3545;
 }
 
+[v-cloak] {
+    display: none;
+}
