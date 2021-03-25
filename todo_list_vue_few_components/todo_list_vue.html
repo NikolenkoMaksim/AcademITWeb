@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Спислк дел Vie</title>
+    <title>Список дел Vue</title>
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="todo_list_vue_style.css">
@@ -24,18 +24,14 @@
             <div class="col">
                 <h1 class="h2 text-center m-3">Список дел</h1>
                 <div class="form-group mb-2">
-                    <template v-if="isInvalidInput">
-                        <label for="input_text_field_invalid">Введите новую заметку</label>
-                        <input v-model="newNoteText" type="text" class="form-control is-invalid"
-                               id="input_text_field_invalid" maxlength="60" placeholder="Введите новую заметку">
-                        <div class="invalid-feedback mt-2 mb-2">Пожалуйста, заполните поле ввода</div>
-                    </template>
-                    <template v-else>
-                        <label for="input_text_field">Введите новую заметку</label>
-                        <input v-model="newNoteText" type="text" class="form-control" id="input_text_field"
-                               maxlength="60"
-                               placeholder="Введите новую заметку">
-                    </template>
+                    <label for="input_text_field_invalid">Введите новую заметку</label>
+                    <input v-model="newNoteText"
+                           type="text" id="input_text_field_invalid"
+                           class="form-control"
+                           :class="{ 'is-invalid': isInvalidInput }"
+                           maxlength="60"
+                           placeholder="Введите новую заметку">
+                    <div class="invalid-feedback mt-2 mb-2">Пожалуйста, заполните поле ввода</div>
                 </div>
             </div>
         </div>
@@ -46,7 +42,6 @@
                 </button>
             </div>
         </div>
-
         <todo-list-note
                 class="row"
                 @delete-note="deleteNote"
@@ -62,18 +57,12 @@
     <div>
         <template v-if="isEditing">
             <div class="col mb-2">
-                <template v-if="isInvalid">
-                    <div>
-                        <input v-model="editText" class="edit_text_field form-control is-invalid" type="text"
-                               maxlength='60'>
-                        <div class="invalid-feedback">Пожалуйста, заполните поле ввода</div>
-                    </div>
-                </template>
-                <template v-else>
-                    <div>
-                        <input v-model="editText" class="edit_text_field form-control" type="text" maxlength='60'>
-                    </div>
-                </template>
+                <input v-model="editText"
+                       type="text"
+                       class="edit_text_field form-control"
+                       :class="{ 'is-invalid': isInvalid }"
+                       maxlength='60'>
+                <div class="invalid-feedback">Пожалуйста, заполните поле ввода</div>
             </div>
             <div class="col-md-auto pl-0 mb-2">
                 <button @click="saveNote" class="btn btn-primary" type="button">Сохранить</button>
@@ -82,7 +71,7 @@
         </template>
         <template v-else>
             <div class="col-auto pr-0 mb-2">●</div>
-            <div class="col mb-2"><span class="note_text">{{note.text}}</span></div>
+            <div class="col mb-2"><span class="note_text">{{ note.text }}</span></div>
             <div class="col-md-auto pl-0 ml-auto mb-2">
                 <button @click="startEditNote" class="btn btn-primary" type="button">
                     Редактировать

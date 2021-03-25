@@ -28,7 +28,7 @@ Vue.component("todo-list-note", {
         },
 
         saveNote: function () {
-            if (this.editText === "") {
+            if (this.editText.trim() === "") {
                 this.isInvalid = true;
                 return;
             }
@@ -36,7 +36,7 @@ Vue.component("todo-list-note", {
             this.isInvalid = false;
 
             this.isEditing = false;
-            this.$emit("save-note", this.note, this.editText);
+            this.$emit("save-note", this.note, this.editText.trim());
         },
 
         deleteNote: function () {
@@ -59,10 +59,11 @@ Vue.component("todo-list", {
 
     methods: {
         addNewNote: function () {
-            var text = this.newNoteText;
+            var text = this.newNoteText.trim();
 
-            if (text.trim() === "") {
+            if (text === "") {
                 this.isInvalidInput = true;
+                console.log(this.isInvalidInput);
                 return;
             }
 
@@ -85,7 +86,7 @@ Vue.component("todo-list", {
 
         saveNote: function (note, newText) {
             note.text = newText;
-        },
+        }
     }
 });
 
