@@ -7,23 +7,24 @@ new Vue({
                 id: "lastNameInput",
                 name: "Фамилия",
                 text: "",
-                isInvalid: false
+                isInvalid: false,
+                errorMessage: "Пожалуйста, заполните поле"
             },
             {
                 id: "firstNameInput",
                 name: "Имя",
                 text: "",
-                isInvalid: false
+                isInvalid: false,
+                errorMessage: "Пожалуйста, заполните поле"
             },
             {
                 id: "phoneInput",
                 name: "Номер телефона",
                 text: "",
-                isInvalid: false
+                isInvalid: false,
+                errorMessage: "Пожалуйста, заполните поле"
             }
         ],
-
-        message: "",
 
         contacts: [],
         contactId: 1
@@ -32,7 +33,6 @@ new Vue({
     methods: {
         addContact: function () {
             var isValidationFailed = false;
-            this.message = "";
 
             this.contacts_data_inputs.forEach(function (contact_data_input) {
                 if (contact_data_input.text.trim() === "") {
@@ -44,25 +44,27 @@ new Vue({
                 }
             });
 
+            this.contacts_data_inputs[2].errorMessage = "Пожалуйста, заполните поле";
+
             if (isValidationFailed) {
                 return;
             }
 
-            var samePhoneNumberContact = _.findWhere(this.contacts, {phoneNumber: this.contacts_data_inputs[2].text});
-            console.log(samePhoneNumberContact);
+            var self = this;
 
-            if (samePhoneNumberContact !== undefined) {
-                this.message = "Контакт с таким номером уже существует";
+            if (this.contacts.some(function (c) {
+                return c.phoneNumber === self.contacts_data_inputs[2].text;
+            })) {
+                self.contacts_data_inputs[2].isInvalid = true;
+                self.contacts_data_inputs[2].errorMessage = "Контакт с таким номером уже существует";
                 return;
             }
 
-            this.message = "";
-
             this.contacts.push({
                 id: this.contactId,
-                lastName: this.contacts_data_inputs[0].text.trim(),
-                firstName: this.contacts_data_inputs[1].text.trim(),
-                phoneNumber: this.contacts_data_inputs[2].text.trim()
+                lastName: this.contacts_data_inputs[0].text,
+                firstName: this.contacts_data_inputs[1].text,
+                phoneNumber: this.contacts_data_inputs[2].text
             });
 
             this.contactId++;
@@ -73,9 +75,9 @@ new Vue({
         },
 
         deleteContact: function (contact) {
-            this.contacts = this.contacts.filter(function (e) {
-                return e !== contact;
-            })
+            this.contacts = this.contacts.filter(function (c) {
+                return c !== contact;
+            });
         }
     }
 });

@@ -30,12 +30,8 @@ body {
     height: 2rem;
 }
 
-.add_button {
+.btn {
     font-weight: 700;
-}
-
-.error_message {
-    color: #dc3545;
 }
 
 [v-cloak] {
