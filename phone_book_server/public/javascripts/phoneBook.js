@@ -116,6 +116,7 @@ new Vue({
             });
 
             if (isValidationFailed) {
+                this.contacts_data_inputs[2].errorMessage = "Пожалйста, заполните поле";
                 return;
             }
 
@@ -136,8 +137,6 @@ new Vue({
 
                 self.term = "";
                 self.loadContacts();
-                self.contacts_data_inputs[2].isInvalid = false;
-                self.contacts_data_inputs[2].errorMessage = "Пожалуйста, заполните поле";
 
                 self.contacts_data_inputs.forEach(function (contact_data_input) {
                     contact_data_input.text = "";

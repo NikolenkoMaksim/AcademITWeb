@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e9e80c8-522f-4a19-b014-971768528a2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/phone_book_server/public/images/checked_checkbox.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phone_book_server/public/images/unchecked_checkbox.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phone_book_server/public/javascripts/phoneBook.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phone_book_server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/phone_book_server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phone_book_server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/phone_book_server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phone_book_server/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/phone_book_server/public/stylesheets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phone_book_server/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/phone_book_server/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phone_book_server/public/javascripts/phoneBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/phone_book_server/public/javascripts/phoneBook.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/phone_book_server/views/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/phone_book_server/views/index.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phone_book_server/views/layout.twig" beforeDir="false" afterPath="$PROJECT_DIR$/phone_book_server/views/layout.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phone_book_vue/phone_book_Vue_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/phone_book_vue/phone_book_vue_page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,21 +124,7 @@
       <workItem from="1616671712693" duration="106000" />
       <workItem from="1616671836898" duration="72000" />
       <workItem from="1616671925533" duration="12613000" />
-      <workItem from="1616857766528" duration="7728000" />
-    </task>
-    <task id="LOCAL-00025" summary="Внесены дополнение">
-      <created>1614264207991</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1614264207991</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Внесены дополнение">
-      <created>1614277568835</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1614277568835</updated>
+      <workItem from="1616857766528" duration="11110000" />
     </task>
     <task id="LOCAL-00027" summary="Выполнена задача phoneBook со 1м и 2м усложнением">
       <created>1614450810979</created>
@@ -477,7 +455,21 @@
       <option name="project" value="LOCAL" />
       <updated>1616675535703</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Выполнена задаа PhoneBookServer со всеми дополнениями">
+      <created>1616866528925</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1616866528927</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Внесены правки в задачу PhoneBook Vue">
+      <created>1616869352775</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1616869352775</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,8 +488,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Убран класс header" />
-    <MESSAGE value="Испарвлены замечания по задача css_form" />
     <MESSAGE value="Испарвлены замечания по задача todo_list" />
     <MESSAGE value="Испарвлены замечания по задача todo_list_jquery" />
     <MESSAGE value="Первая работа с npm" />
@@ -521,6 +511,8 @@
     <MESSAGE value="Выполнена подготовка задачи &quot;PhoneBookServer&quot;" />
     <MESSAGE value="Добавлена обработка атрибута [v-cloak] в css задачах PhoneBookVue и todoListVue" />
     <MESSAGE value="Исправлены замечания по задаче &quot;Todo list Vue&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлены замечания по задаче &quot;Todo list Vue&quot;" />
+    <MESSAGE value="Выполнена задаа PhoneBookServer со всеми дополнениями" />
+    <MESSAGE value="Внесены правки в задачу PhoneBook Vue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Внесены правки в задачу PhoneBook Vue" />
   </component>
 </project>
