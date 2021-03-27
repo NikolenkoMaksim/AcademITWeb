@@ -44,9 +44,8 @@ new Vue({
                 }
             });
 
-            this.contacts_data_inputs[2].errorMessage = "Пожалуйста, заполните поле";
-
             if (isValidationFailed) {
+                this.contacts_data_inputs[2].errorMessage = "Пожалуйста, заполните поле";
                 return;
             }
 
