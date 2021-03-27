@@ -1,8 +1,43 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #adcbe67d;
+    font-weight: 700;
+    color: #007bff;
 }
 
-a {
-  color: #00B7FF;
+.contacts-table {
+    font-weight: 400;
+}
+
+.contacts-table thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.contacts-table tbody {
+    background-color: #fff;
+}
+
+.delete-cell {
+    color: #f00;
+}
+
+.delete-cell:hover {
+    cursor: pointer;
+}
+
+.empty-row-delete-cel {
+    width: 4.3rem;
+    height: 2rem;
+}
+
+.btn {
+    font-weight: 700;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+.limitWidth {
+    max-width: 20px;
 }

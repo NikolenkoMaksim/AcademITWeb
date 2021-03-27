@@ -1,6 +1,155 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
-  <h1>{{title}}</h1>
-  <p>Welcome to {{title}}</p>
+    {% verbatim %}
+        <div id="app" class="container" v-cloak>
+            <div class="row">
+                <h1 class="h2 col text-center m-3">Телефонная книга</h1>
+            </div>
+
+            <template v-for="contact_data_input in contacts_data_inputs" :key="contact_data_input.id">
+                <div class="row mb-2">
+                    <div class="col pl-4">
+                        {{ contact_data_input.name }}
+                    </div>
+                </div>
+                 <div class="row mb-2">
+                    <div class="col mb-2">
+                        <input v-model="contact_data_input.text"
+                               type="text"
+                               class="form-control"
+                               :class="{'is-invalid': contact_data_input.isInvalid}"
+                               maxlength="60">
+                        <div class="invalid-feedback">{{ contact_data_input.errorMessage }}</div>
+                    </div>
+                </div>
+            </template>
+
+            <div class="row">
+                 <div class="col text-center">
+                    <button @click="addContact" type="button" class="btn btn-primary mt-2" aria-pressed="true">
+                        Добавить контакт
+                    </button>
+                 </div>
+            </div>
+
+            <div class="row mb-2">
+                <div class="col pl-4">Поиск</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">
+                    <input v-model="term" class="form-control" type="text" maxlength='60'>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col text-center">
+                    <button @click="loadContacts" type="button" class="btn btn-primary mt-3 mr-3 add_button" aria-pressed="true">
+                        Поиск
+                    </button>
+                    <button @click="clearSearch" type="button" class="btn btn-secondary mt-3 add_button" aria-pressed="true">
+                        Очистить
+                    </button>
+                </div>
+            </div>
+
+            <table class="table table-bordered table-sm contacts-table mt-4">
+                <thead class="table-primary">
+                <tr>
+                    <th scope="col" @click="chooseAll" class="text-center limitWidth">
+                          <template v-if="deleteAllCheckboxValue">
+                                <img src="/images/checked_checkbox.ico"
+                                     class="img-fluid justify-content-center"
+                                     alt="checked_checkbox">
+                          </template>
+                          <template v-else>
+                                <img src="/images/unchecked_checkbox.ico"
+                                     class="img-fluid"
+                                     alt="unchecked_checkbox">
+                          </template>
+                    </th>
+                    <th scope="col" class="text-center">№</th>
+                    <th scope="col" class="pl-3">Фамилия</th>
+                    <th scope="col" class="pl-3">Имя</th>
+                    <th scope="col" class="pl-3">Номер телефона</th>
+                    <th scope="col" class="pl-3"></th>
+                </tr>
+                </thead>
+                <tbody>
+                    <template v-if="contacts.length < 1">
+                        <tr>
+                            <td scope="row"></td>
+                            <td class="text-center"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="empty-row-delete-cel text-center"></td>
+                        </tr>
+                    </template>
+                    <tr v-for="(contact, index) in contacts" :key="contact.id">
+                        <td scope="row" @click="checkContact(contact)" class="text-center limitWidth">
+                            <template v-if="contact.isChecked">
+                                <img src="/images/checked_checkbox.ico"
+                                     class="img-fluid"
+                                     alt="checked_checkbox">
+                            </template>
+                            <template v-else>
+                                <img src="/images/unchecked_checkbox.ico"
+                                     class="img-fluid"
+                                     alt="unchecked_checkbox">
+                            </template>
+                        </td>
+                        <td class="text-center pl-2">{{index + 1}}</td>
+                        <td class="pl-3">{{contact.lastName}}</td>
+                        <td class="pl-3">{{contact.firstName}}</td>
+                        <td class="pl-3">{{contact.phoneNumber}}</td>
+                        <td @click="deleteContacts(contact)" class="text-center delete-cell">X</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <modal ref="confirmDeleteDialog">
+                <p>Вы уверены, что хотите удалить контакты?</p>
+
+                <template v-slot:title>
+                    Подтвеждение удаления
+                </template>
+
+                <template v-slot:close-button-text>
+                    Отменить
+                </template>
+
+                <template v-slot:ok-button-text>
+                    Удалить
+                </template>
+            </modal>
+        </div>
+
+        <script type="text/x-template" id="modal-template">
+            <div ref="modal" class="modal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">
+                                <slot name="title"></slot>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <slot></slot>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                <slot name="close-button-text"></slot>
+                            </button>
+                            <button @click="ok" type="button" class="btn btn-primary">
+                                <slot name="ok-button-text"></slot>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </script>
+    {% endverbatim %}
 {% endblock %}
