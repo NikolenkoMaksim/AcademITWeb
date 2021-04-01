@@ -43,7 +43,6 @@
             </div>
         </div>
         <todo-list-note
-                class="row"
                 @delete-note="deleteNote"
                 @save-note="saveNote"
                 v-for="note in notes"
@@ -54,7 +53,7 @@
 </script>
 
 <script type="text/x-template" id="todo-list-note-template">
-    <div>
+    <div class="row">
         <template v-if="isEditing">
             <div class="col mb-2">
                 <input v-model="editText"

@@ -63,7 +63,6 @@ Vue.component("todo-list", {
 
             if (text === "") {
                 this.isInvalidInput = true;
-                console.log(this.isInvalidInput);
                 return;
             }
 
