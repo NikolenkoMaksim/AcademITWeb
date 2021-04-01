@@ -1,11 +1,6 @@
 body {
     background-color: #adcbe67d;
-    font-weight: 700;
     color: #007bff;
-}
-
-.contacts-table {
-    font-weight: 400;
 }
 
 .contacts-table thead {
@@ -19,15 +14,15 @@ body {
 
 .delete-cell {
     color: #f00;
-}
-
-.delete-cell:hover {
     cursor: pointer;
 }
 
-.empty-row-delete-cel {
-    width: 4.3rem;
+.empty-row {
     height: 2rem;
+}
+
+.bolt-text {
+    font-weight: 700;
 }
 
 .btn {

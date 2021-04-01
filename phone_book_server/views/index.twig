@@ -7,20 +7,20 @@
                 <h1 class="h2 col text-center m-3">Телефонная книга</h1>
             </div>
 
-            <template v-for="contact_data_input in contacts_data_inputs" :key="contact_data_input.id">
+            <template v-for="contactDataInput in contactsDataInputs" :key="contactDataInput.id">
                 <div class="row mb-2">
-                    <div class="col pl-4">
-                        {{ contact_data_input.name }}
+                    <div class="col pl-4 bolt-text">
+                        {{ contactDataInput.name }}
                     </div>
                 </div>
                  <div class="row mb-2">
                     <div class="col mb-2">
-                        <input v-model="contact_data_input.text"
+                        <input v-model="contactDataInput.text"
                                type="text"
                                class="form-control"
-                               :class="{ 'is-invalid': contact_data_input.isInvalid }"
+                               :class="{ 'is-invalid': contactDataInput.isInvalid }"
                                maxlength="60">
-                        <div class="invalid-feedback">{{ contact_data_input.errorMessage }}</div>
+                        <div class="invalid-feedback bolt-text">{{ contactDataInput.errorMessage }}</div>
                     </div>
                 </div>
             </template>
@@ -34,7 +34,7 @@
             </div>
 
             <div class="row mb-2">
-                <div class="col pl-4">Поиск</div>
+                <div class="col pl-4 bolt-text">Поиск</div>
             </div>
             <div class="row mb-2">
                 <div class="col">
@@ -52,60 +52,62 @@
                 </div>
             </div>
 
-            <table class="table table-bordered table-sm contacts-table mt-4">
-                <thead class="table-primary">
-                <tr>
-                    <th scope="col" @click="chooseAll" class="text-center limitWidth">
-                          <template v-if="deleteAllCheckboxValue">
-                                <img src="/images/checked_checkbox.ico"
-                                     class="img-fluid justify-content-center"
-                                     alt="checked_checkbox">
-                          </template>
-                          <template v-else>
-                                <img src="/images/unchecked_checkbox.ico"
-                                     class="img-fluid"
-                                     alt="unchecked_checkbox">
-                          </template>
-                    </th>
-                    <th scope="col" class="text-center">№</th>
-                    <th scope="col" class="pl-3">Фамилия</th>
-                    <th scope="col" class="pl-3">Имя</th>
-                    <th scope="col" class="pl-3">Номер телефона</th>
-                    <th scope="col" class="pl-3"></th>
-                </tr>
-                </thead>
-                <tbody>
-                    <template v-if="contacts.length < 1">
-                        <tr>
-                            <td scope="row"></td>
-                            <td class="text-center"></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td class="empty-row-delete-cel text-center"></td>
-                        </tr>
-                    </template>
-                    <tr v-for="(contact, index) in contacts" :key="contact.id">
-                        <td scope="row" @click="checkContact(contact)" class="text-center limitWidth">
-                            <template v-if="contact.isChecked">
-                                <img src="/images/checked_checkbox.ico"
-                                     class="img-fluid"
-                                     alt="checked_checkbox">
-                            </template>
-                            <template v-else>
-                                <img src="/images/unchecked_checkbox.ico"
-                                     class="img-fluid"
-                                     alt="unchecked_checkbox">
-                            </template>
-                        </td>
-                        <td class="text-center pl-2">{{index + 1}}</td>
-                        <td class="pl-3">{{contact.lastName}}</td>
-                        <td class="pl-3">{{contact.firstName}}</td>
-                        <td class="pl-3">{{contact.phoneNumber}}</td>
-                        <td @click="deleteContacts(contact)" class="text-center delete-cell">X</td>
+            <div class="table-responsive">
+                <table class="table table-bordered table-sm contacts-table mt-4">
+                    <thead class="table-primary">
+                    <tr>
+                        <th scope="col" @click="chooseAll" class="text-center limitWidth">
+                              <template v-if="deleteAllCheckboxValue">
+                                    <img src="/images/checked_checkbox.ico"
+                                         class="img-fluid justify-content-center"
+                                         alt="checked_checkbox">
+                              </template>
+                              <template v-else>
+                                    <img src="/images/unchecked_checkbox.ico"
+                                         class="img-fluid"
+                                         alt="unchecked_checkbox">
+                              </template>
+                        </th>
+                        <th scope="col" class="text-center">№</th>
+                        <th scope="col" class="pl-3">Фамилия</th>
+                        <th scope="col" class="pl-3">Имя</th>
+                        <th scope="col" class="pl-3">Номер телефона</th>
+                        <th scope="col" class="pl-3"></th>
                     </tr>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        <template v-if="contacts.length === 0">
+                            <tr class="empty-row text-center">
+                                <td scope="row"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </template>
+                        <tr v-for="(contact, index) in contacts" :key="contact.id">
+                            <td scope="row" @click="checkContact(contact)" class="text-center limitWidth">
+                                <template v-if="contact.isChecked">
+                                    <img src="/images/checked_checkbox.ico"
+                                         class="img-fluid"
+                                         alt="checked_checkbox">
+                                </template>
+                                <template v-else>
+                                    <img src="/images/unchecked_checkbox.ico"
+                                         class="img-fluid"
+                                         alt="unchecked_checkbox">
+                                </template>
+                            </td>
+                            <td class="text-center pl-2">{{index + 1}}</td>
+                            <td class="pl-3">{{contact.lastName}}</td>
+                            <td class="pl-3">{{contact.firstName}}</td>
+                            <td class="pl-3">{{contact.phoneNumber}}</td>
+                            <td @click="deleteContacts(contact)" class="text-center delete-cell">X</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <modal ref="confirmDeleteDialog">
                 <p>Вы уверены, что хотите удалить контакты?</p>
@@ -136,7 +138,7 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body bolt-text">
                             <slot></slot>
                         </div>
                         <div class="modal-footer">
