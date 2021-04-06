@@ -58,28 +58,30 @@ new Vue({
                 name: "Фамилия",
                 text: "",
                 isInvalid: false,
-                errorMessage: "Пожалйста, заполните поле"
+                errorMessage: "Пожалуйста, заполните поле"
             },
             {
                 id: "firstNameInput",
                 name: "Имя",
                 text: "",
                 isInvalid: false,
-                errorMessage: "Пожалйста, заполните поле"
+                errorMessage: "Пожалуйста, заполните поле"
             },
             {
                 id: "phoneInput",
                 name: "Номер телефона",
                 text: "",
                 isInvalid: false,
-                errorMessage: "Пожалйста, заполните поле"
+                errorMessage: "Пожалуйста, заполните поле"
             }
         ],
 
         contacts: [],
         term: "",
         deleteAllCheckboxValue: false,
-        service: new PhoneBookService()
+        isDeleteContactsButtonShow: false,
+        service: new PhoneBookService(),
+        confirmMessage: ""
     },
 
     created: function () {
@@ -92,6 +94,7 @@ new Vue({
 
             this.service.getContacts(this.term.trim()).done(function (response) {
                 self.contacts = response;
+                self.checkDeleteAllCheckBox();
             }).fail(function () {
                 alert("Не удалось загрузить список контактов");
             });
@@ -116,7 +119,7 @@ new Vue({
             });
 
             if (isValidationFailed) {
-                this.contactsDataInputs[2].errorMessage = "Пожалйста, заполните поле";
+                this.contactsDataInputs[2].errorMessage = "Пожалуйста, заполните поле";
                 return;
             }
 
@@ -146,12 +149,12 @@ new Vue({
             });
         },
 
-        deleteContacts: function (contact) {
+        deleteContacts: function () {
             var self = this;
 
-            this.$refs.confirmDeleteDialog.show(function () {
-                contact.isChecked = true;
+            this.confirmMessage = "Вы уверены, что хотите удалить выбранные контакты?";
 
+            this.$refs.confirmDeleteDialog.show(function () {
                 var contactsIds = [];
 
                 self.contacts.forEach(function (c) {
@@ -160,13 +163,36 @@ new Vue({
                     }
                 });
 
+                if (contactsIds.length === 0) {
+                    alert("Не выбрано ни одного контакта");
+                    return;
+                }
+
                 self.service.deleteContacts(contactsIds).done(function (response) {
                     if (!response.success) {
                         alert(response.message);
                         return;
                     }
 
-                    self.deleteAllCheckboxValue = false;
+                    self.loadContacts();
+                }).fail(function () {
+                    alert("Не удалось удалить контакты");
+                });
+            });
+        },
+
+        deleteContact: function (contact) {
+            var self = this;
+
+            this.confirmMessage = "Вы уверены, что хотите удалить контакт?";
+
+            this.$refs.confirmDeleteDialog.show(function () {
+                self.service.deleteContacts([contact.id]).done(function (response) {
+                    if (!response.success) {
+                        alert(response.message);
+                        return;
+                    }
+
                     self.loadContacts();
                 }).fail(function () {
                     alert("Не удалось удалить контакт");
@@ -176,6 +202,7 @@ new Vue({
 
         chooseAll: function () {
             this.deleteAllCheckboxValue = !this.deleteAllCheckboxValue;
+            this.isDeleteContactsButtonShow = this.deleteAllCheckboxValue;
             var self = this;
 
             this.contacts.forEach(function (c) {
@@ -186,15 +213,20 @@ new Vue({
         checkContact: function (contact) {
             contact.isChecked = !contact.isChecked;
 
-            var self = this;
-            self.deleteAllCheckboxValue = true;
+            this.checkDeleteAllCheckBox();
+        },
+
+        checkDeleteAllCheckBox: function () {
+            var checkedContactsCount = 0;
 
             this.contacts.forEach(function (c) {
-                if (c.isChecked === false) {
-                    self.deleteAllCheckboxValue = false;
-                    return false;
+                if (c.isChecked) {
+                    checkedContactsCount++;
                 }
             });
+
+            this.isDeleteContactsButtonShow = checkedContactsCount !== 0;
+            this.deleteAllCheckboxValue = checkedContactsCount === this.contacts.length && checkedContactsCount !== 0;
         }
     }
 });

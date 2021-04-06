@@ -60,19 +60,31 @@
                               <template v-if="deleteAllCheckboxValue">
                                     <img src="/images/checked_checkbox.ico"
                                          class="img-fluid justify-content-center"
-                                         alt="checked_checkbox">
+                                         alt="checked_checkbox"
+                                         title="Снять выделение">
                               </template>
                               <template v-else>
                                     <img src="/images/unchecked_checkbox.ico"
                                          class="img-fluid"
-                                         alt="unchecked_checkbox">
+                                         alt="unchecked_checkbox"
+                                         title="Выделить все">
                               </template>
                         </th>
                         <th scope="col" class="text-center">№</th>
                         <th scope="col" class="pl-3">Фамилия</th>
                         <th scope="col" class="pl-3">Имя</th>
                         <th scope="col" class="pl-3">Номер телефона</th>
-                        <th scope="col" class="pl-3"></th>
+                        <template v-if="isDeleteContactsButtonShow">
+                            <th scope="col"
+                                @click="deleteContacts"
+                                class="text-center delete-cell"
+                                title="Удалить выбранные">
+                                X
+                            </th>
+                        </template>
+                        <template v-else>
+                            <th scope="col" class="text-center pl-3"></th>
+                        </template>
                     </tr>
                     </thead>
                     <tbody>
@@ -91,26 +103,32 @@
                                 <template v-if="contact.isChecked">
                                     <img src="/images/checked_checkbox.ico"
                                          class="img-fluid"
-                                         alt="checked_checkbox">
+                                         alt="checked_checkbox"
+                                         title="Снять выделение">
                                 </template>
                                 <template v-else>
                                     <img src="/images/unchecked_checkbox.ico"
                                          class="img-fluid"
-                                         alt="unchecked_checkbox">
+                                         alt="unchecked_checkbox"
+                                         title="Выделить">
                                 </template>
                             </td>
                             <td class="text-center pl-2">{{index + 1}}</td>
                             <td class="pl-3">{{contact.lastName}}</td>
                             <td class="pl-3">{{contact.firstName}}</td>
                             <td class="pl-3">{{contact.phoneNumber}}</td>
-                            <td @click="deleteContacts(contact)" class="text-center delete-cell">X</td>
+                            <td @click="deleteContact(contact)"
+                                class="text-center delete-cell"
+                                title="Удалить контакт">
+                                X
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
             <modal ref="confirmDeleteDialog">
-                <p>Вы уверены, что хотите удалить контакты?</p>
+                <p>{{ confirmMessage }}</p>
 
                 <template v-slot:title>
                     Подтвеждение удаления
