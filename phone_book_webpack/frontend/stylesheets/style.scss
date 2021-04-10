@@ -1,0 +1,43 @@
+$blue-color: #007bff;
+$delete-cell-color: #f00;
+
+body {
+    background-color: #adcbe67d;
+    color: $blue-color;
+}
+
+.contacts-table {
+    thead {
+        background-color: $blue-color;
+        color: #fff;
+    }
+
+    tbody {
+        background-color: #fff;
+    }
+}
+
+.delete-cell {
+    color: $delete-cell-color;
+    cursor: pointer;
+}
+
+.empty-row {
+    height: 2rem;
+}
+
+.bolt-text {
+    font-weight: 700;
+}
+
+.btn {
+    font-weight: 700;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+.limitWidth {
+    max-width: 20px;
+}
