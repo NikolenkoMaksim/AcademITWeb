@@ -2,22 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e9e80c8-522f-4a19-b014-971768528a2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/webpack/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/bin/www" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/public/images/checked_checkbox.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/public/images/unchecked_checkbox.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/public/javascripts/phoneBook.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/public/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/public/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/public/stylesheets/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/routes/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/views/error.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/views/index.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/views/layout.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phone_book_webpack/frontend/javascripts/deleteConfirmDialog.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phone_book_webpack/frontend/javascripts/phoneBook.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/bin/www" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/public/images/checked_checkbox.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/public/images/unchecked_checkbox.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/public/javascripts/phoneBook.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/public/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/public/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/public/stylesheets/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/routes/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/views/error.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/views/index.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/views/layout.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +33,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -62,7 +65,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="14" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/webpack/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/phone_book_webpack/public" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -76,11 +79,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Documents\IdeaProjects\AcademITWeb\phone_book_webpack\public" />
       <recent name="C:\Documents\IdeaProjects\AcademITWeb\webpack\public" />
+      <recent name="C:\Documents\IdeaProjects\AcademITWeb\webpack\frontend" />
       <recent name="C:\Documents\IdeaProjects\AcademITWeb\webpack" />
       <recent name="C:\Documents\IdeaProjects\AcademITWeb\phone_book_server\public\images" />
-      <recent name="C:\Documents\IdeaProjects\AcademITWeb\todo_list_vue" />
-      <recent name="C:\Documents\IdeaProjects\AcademITWeb\todo_list_vue\node_modules" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Documents\IdeaProjects\AcademITWeb\todo_list_jquery\todo_list_js" />
@@ -90,19 +93,57 @@
       <recent name="C:\Documents\IdeaProjects\AcademITWeb\phoneBook\phonebook_css" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.build (1)">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="build (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/phone_book_webpack/frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/webpack/frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/phone_book_webpack/frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/phone_book_webpack/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
     </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/phone_book_server/package.json" />
@@ -116,6 +157,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build (1)" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.start (1)" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
@@ -153,14 +198,10 @@
       <workItem from="1616857766528" duration="11367000" />
       <workItem from="1617287323516" duration="6725000" />
       <workItem from="1617710313344" duration="13207000" />
-      <workItem from="1617808368110" duration="1493000" />
-    </task>
-    <task id="LOCAL-00033" summary="Перенесен файл phoneBookScript.js">
-      <created>1614524514593</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1614524514593</updated>
+      <workItem from="1617808368110" duration="1650000" />
+      <workItem from="1617892182630" duration="1558000" />
+      <workItem from="1617959114229" duration="6246000" />
+      <workItem from="1617969254863" duration="20465000" />
     </task>
     <task id="LOCAL-00034" summary="Исправлены замечания по задаче Temperature Converter">
       <created>1614524747483</created>
@@ -498,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617725747275</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Сделана подготовка к задаче Webpack">
+      <created>1617810012000</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1617810012001</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,7 +565,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Исправлены замечания по задаче &quot;СSS Форма&quot;" />
     <MESSAGE value="Исправлены замечания по задаче &quot;Temperature converter&quot;" />
     <MESSAGE value="Исправлены замечания по задаче &quot;Phone book jQuery&quot;" />
     <MESSAGE value="Исправлены замечания по задаче &quot;Todo list jQuery&quot;" />
@@ -542,6 +589,7 @@
     <MESSAGE value="Внесены изменения по задаче &quot;Phone book server&quot;, осноываясь на результатах проверки &quot;Phone book Vue&quot;" />
     <MESSAGE value="Внесены изменения по задаче &quot;Todo list Vue&quot;" />
     <MESSAGE value="Исправлены замечания по задаче &quot;Phone Book Server&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлены замечания по задаче &quot;Phone Book Server&quot;" />
+    <MESSAGE value="Сделана подготовка к задаче Webpack" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделана подготовка к задаче Webpack" />
   </component>
 </project>
