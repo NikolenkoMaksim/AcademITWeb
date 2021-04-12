@@ -7,7 +7,7 @@
     <template>
       <div v-for="contactDataInput in contactsDataInputs" :key="contactDataInput.id">
         <div class="row mb-2">
-          <div class="col pl-4 bolt-text">
+          <div class="col pl-4 font-weight-bold">
             {{ contactDataInput.name }}
           </div>
         </div>
@@ -18,7 +18,7 @@
                    class="form-control"
                    :class="{ 'is-invalid': contactDataInput.isInvalid }"
                    maxlength="60">
-            <div class="invalid-feedback bolt-text">{{ contactDataInput.errorMessage }}</div>
+            <div class="invalid-feedback font-weight-bold">{{ contactDataInput.errorMessage }}</div>
           </div>
         </div>
       </div>
@@ -33,7 +33,7 @@
     </div>
 
     <div class="row mb-2">
-      <div class="col pl-4 bolt-text">Поиск</div>
+      <div class="col pl-4 font-weight-bold">Поиск</div>
     </div>
     <div class="row mb-2">
       <div class="col">
@@ -56,7 +56,7 @@
       <table class="table table-bordered table-sm contacts-table mt-4">
         <thead class="table-primary">
         <tr>
-          <th scope="col" @click="chooseAll" class="text-center limitWidth">
+          <th scope="col" @click="chooseAll" class="text-center limit-width">
             <template v-if="deleteAllCheckboxValue">
               <img src="../images/checked_checkbox.ico"
                    class="img-fluid justify-content-center"
@@ -99,7 +99,7 @@
           </tr>
         </template>
         <tr v-for="(contact, index) in contacts" :key="contact.id">
-          <td scope="row" @click="checkContact(contact)" class="text-center limitWidth">
+          <td scope="row" @click="checkContact(contact)" class="text-center limit-width">
             <template v-if="contact.isChecked">
               <img src="../images/checked_checkbox.ico"
                    class="img-fluid"
@@ -146,7 +146,7 @@
 </template>
 
 <script>
-import PhoneBookService from "./phoneBookServise";
+import PhoneBookService from "./phoneBookService";
 import DeleteConfirmDialog from "./DeleteConfirmDialog.vue"
 
 export default ({
@@ -327,7 +327,3 @@ export default ({
   }
 });
 </script>
-
-<style scoped>
-
-</style>

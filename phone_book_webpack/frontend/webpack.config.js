@@ -2,7 +2,7 @@ const path = require("path");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     devtool: "source-map",
@@ -25,7 +25,7 @@ module.exports = {
 
     resolve: {
         alias: {
-            "vue$": "vue/dist/vue.runtime.esm.js"
+            "vue$": "vue/dist/vue.esm.js"
         }
     },
 
@@ -41,17 +41,17 @@ module.exports = {
                     {
                         loader: "file-loader?name=[path][name].[ext]",
                         options: {
-                            esModule: false,
+                            esModule: false
                         }
                     }
                 ]
             },
             {
-                test: /\.scss$/i,
+                test: /\.scss$/,
                 use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
             },
             {
-                test: /\.m?js$/,
+                test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",

@@ -56,7 +56,7 @@
                 <table class="table table-bordered table-sm contacts-table mt-4">
                     <thead class="table-primary">
                     <tr>
-                        <th scope="col" @click="chooseAll" class="text-center limitWidth">
+                        <th scope="col" @click="chooseAll" class="text-center limit-width">
                               <template v-if="deleteAllCheckboxValue">
                                     <img src="/images/checked_checkbox.ico"
                                          class="img-fluid justify-content-center"
@@ -99,7 +99,7 @@
                             </tr>
                         </template>
                         <tr v-for="(contact, index) in contacts" :key="contact.id">
-                            <td scope="row" @click="checkContact(contact)" class="text-center limitWidth">
+                            <td scope="row" @click="checkContact(contact)" class="text-center limit-width">
                                 <template v-if="contact.isChecked">
                                     <img src="/images/checked_checkbox.ico"
                                          class="img-fluid"

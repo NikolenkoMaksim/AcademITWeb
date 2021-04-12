@@ -33,6 +33,6 @@ body {
     display: none;
 }
 
-.limitWidth {
+.limit-width {
     max-width: 20px;
 }

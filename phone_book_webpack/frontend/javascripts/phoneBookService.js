@@ -11,7 +11,7 @@ export default class PhoneBookService {
             contentType: "application/json",
             data: JSON.stringify(data)
         });
-    };
+    }
 
     getContacts(term) {
         return this.get("/api/getContacts", {term});
