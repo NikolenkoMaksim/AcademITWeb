@@ -17,18 +17,8 @@
 export default {
   name: "Movies",
 
-  data: () => ({
-    number: 0
-  }),
-
   methods: {
-    loadMovies() {
-      this.$store.dispatch("loadMovies");
-    },
 
-    appNumber() {
-      this.number += 1;
-    }
   }
 }
 </script>
