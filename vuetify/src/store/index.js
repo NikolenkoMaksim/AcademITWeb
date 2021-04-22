@@ -21,6 +21,7 @@ export default new Vuex.Store({
             state.page = data.page;
             state.totalPages = data.total_pages;
             state.movies = data.results;
+            console.log(state.movies);
         },
 
         saveGenres(state, data) {

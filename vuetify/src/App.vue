@@ -45,7 +45,7 @@ export default {
     //
   }),
 
-  created() {
+  beforeCreate() {
     this.$store.dispatch("loadMovies");
     this.$store.dispatch("loadGenres")
   },
