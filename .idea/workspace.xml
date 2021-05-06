@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e9e80c8-522f-4a19-b014-971768528a2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/vuetify/src/views/FavoritesMovies.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuetify/src/views/Movie.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuetify/src/views/SearchResults.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/views/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/About.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/src/views/Movies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/Movies.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -191,21 +198,9 @@
       <workItem from="1618253315547" duration="4222000" />
       <workItem from="1618661782246" duration="6639000" />
       <workItem from="1618734029280" duration="12081000" />
-      <workItem from="1618848241578" duration="21230000" />
-    </task>
-    <task id="LOCAL-00041" summary="Исправлены замечания по задаче css_table">
-      <created>1614613094994</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1614613094994</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Убран класс header">
-      <created>1614613476689</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1614613476689</updated>
+      <workItem from="1618848241578" duration="41194000" />
+      <workItem from="1619348476669" duration="30108000" />
+      <workItem from="1620041390811" duration="54559000" />
     </task>
     <task id="LOCAL-00043" summary="Испарвлены замечания по задача css_form">
       <created>1614613749433</created>
@@ -536,7 +531,21 @@
       <option name="project" value="LOCAL" />
       <updated>1619031561707</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="Продолжаем работу с задачей Vuetify">
+      <created>1619121066208</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1619121066209</updated>
+    </task>
+    <task id="LOCAL-00091" summary="Продолжаем работу с задачей Vuetify">
+      <created>1619121364626</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1619121364626</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
