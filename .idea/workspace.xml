@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e9e80c8-522f-4a19-b014-971768528a2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/vuetify/src/views/FavoritesMovies.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuetify/src/views/Movie.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuetify/src/views/SearchResults.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuetify/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuetify/src/views/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/About.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/views/About.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/views/FavoritesMovies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/FavoritesMovies.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/views/Home.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/views/Movie.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/Movie.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/src/views/Movies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/Movies.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/views/SearchResults.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/SearchResults.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,6 +201,10 @@
       <workItem from="1618848241578" duration="41194000" />
       <workItem from="1619348476669" duration="30108000" />
       <workItem from="1620041390811" duration="54559000" />
+      <workItem from="1620654735175" duration="813000" />
+      <workItem from="1620658913481" duration="5688000" />
+      <workItem from="1620704720124" duration="5435000" />
+      <workItem from="1620710643987" duration="20076000" />
     </task>
     <task id="LOCAL-00043" summary="Испарвлены замечания по задача css_form">
       <created>1614613749433</created>

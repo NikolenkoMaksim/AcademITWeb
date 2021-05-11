@@ -21,26 +21,30 @@
 
       <v-main>
         <v-container
-            class="fill-height"
             fluid
         >
           <v-row
-              align="center"
               justify="center"
               app
               v-on:keyup.enter="search">
-            <v-col cols="4">
+            <v-col class="col-xl-6 col-lg-6 col-md-8 col-sm-8 col-xs-12 mb-0">
               <v-text-field
                   v-model="searchText"
                   :clearable=true
                   placeholder="Поиск"
                   background-color="#EDE7F6"
-                  height="3rem"
+                  height="2rem"
+                  dense
                   class="text-h6"
               ></v-text-field>
             </v-col>
-            <v-col cols="1">
-              <v-btn @click="search" large class="myBackground myButtonText">Поиск</v-btn>
+            <v-col class="mb-0 col-2 col-xs-4" align="centre">
+              <v-btn
+                  @click="search"
+                  class="myBackground myButtonText"
+              >
+                Поиск
+              </v-btn>
             </v-col>
           </v-row>
 
@@ -67,15 +71,11 @@ export default {
     searchText: "",
   }),
 
-  beforeCreate() {
-    this.$store.dispatch("loadConfiguration");
-  },
-
   methods: {
     search() {
       if(this.searchText !== "") {
         this.$store.commit("setSearchResultsPage", 1);
-        this.$store.commit("setSearchedText", this.searchText);
+        this.$store.commit("setSearchText", this.searchText);
         this.searchText = "";
         this.$store.dispatch("loadSearchResults");
         this.$router.push({path: "/search"});
@@ -99,18 +99,14 @@ export default {
 }
 
 .tabText {
-  font-size: 1.1rem !important;
+  font-size: 0.9rem !important;
   color: #FFF !important;
 }
 
 .movieTitle {
-  font-size: 1.5rem !important;
+  font-size: 1.1rem !important;
   font-weight: 700 !important;
-  line-height: 1.8rem !important;
-}
-
-.genres {
-  font-size: 1.0rem !important;
+  line-height: 1.4rem !important;
 }
 
 .v-input__slot {
@@ -118,7 +114,7 @@ export default {
 }
 
 .myButtonText {
-  font-size: 1.1rem !important;
+  font-size: 0.9rem !important;
   font-weight: 600 !important;
 }
 
@@ -132,7 +128,7 @@ a:-webkit-any-link {
 
 .containerTitle {
   font-weight: 500;
-  font-size: 2.0rem;
+  font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
 }
 

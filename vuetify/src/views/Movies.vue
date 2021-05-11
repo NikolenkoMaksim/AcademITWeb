@@ -1,5 +1,5 @@
 <template>
-  <v-container class="grey lighten-5">
+  <v-container class="lighten-5">
     <v-row>
       <v-col>
         <v-pagination
@@ -20,22 +20,45 @@
     </v-row>
 
     <v-row justify="center">
-      <v-col cols="2" v-for="movie in $store.state.movies" :key="movie.id">
-        <v-card class="myBackground" height="40rem">
-          <v-card-text @click="invertFavorite(movie.id)" class="text-right text-h6 pt-1 pb-1">
-            <span v-if="movie.favorite" class="pointerCursor" title="Удалить из избранного">&#x1f9e1;</span>
-            <span v-else class="pointerCursor" title="Добавить в избранное">&#x1f90d;</span>
+      <v-col
+          class="col-xl-2 col-lg-3 col-md-4 col-sm-6"
+          v-for="movie in $store.state.movies"
+          :key="movie.id"
+      >
+        <v-card
+            class="myBackground"
+            max-height="100%"
+            height="100%"
+        >
+          <v-card-text class="text-right text-h6 pt-1 pb-1">
+            <span
+                v-if="movie.favorite"
+                @click="invertFavorite(movie.id)"
+                class="pointerCursor"
+                title="Удалить из избранного"
+            >
+              &#x1f9e1;
+            </span>
+            <span
+                v-else class="pointerCursor"
+                @click="invertFavorite(movie.id)"
+                title="Добавить в избранное"
+            >
+              &#x1f90d;
+            </span>
           </v-card-text>
 
           <v-img
-              :src=movie.posterW92
+              :src=movie.posterW342
               alt="poster"
               @click="openMoviePage(movie.id)"
               class="pointerCursor"
-              height="25rem"
           ></v-img>
 
-          <v-card-text @click="openMoviePage(movie.id)" class="text-center pb-0 pointerCursor movieTitle">
+          <v-card-text
+              @click="openMoviePage(movie.id)"
+              class="text-center pb-0 pointerCursor movieTitle"
+          >
             {{ movie.title }}
           </v-card-text>
 
@@ -73,7 +96,6 @@ export default {
     this.$store.dispatch("loadGenres");
   },
 
-
   data: () => ({
     page: 1
   }),
@@ -88,17 +110,13 @@ export default {
   methods: {
     openMoviePage(movieId) {
       this.$store.commit("setCurrentMovieId", movieId);
-      this.$router.push({path: "/movie"})
+      document.location.href = "#app";
+      this.$router.push({path: "/movie"});
     },
 
     invertFavorite(movieId) {
-      console.log(movieId);
-      this.$store.commit("invertFavorite", movieId);
+      this.$store.commit("invertMoviesFavorite", movieId);
     }
   }
 }
 </script>
-
-<style>
-
-</style>
