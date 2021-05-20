@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1e9e80c8-522f-4a19-b014-971768528a2e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuetify/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuetify/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/components/HelloWorld.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuetify/src/views/About.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/src/views/FavoritesMovies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/FavoritesMovies.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuetify/src/views/Home.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/src/views/Movie.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/Movie.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/src/views/Movies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/Movies.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/src/views/SearchResults.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/SearchResults.vue" afterDir="false" />
@@ -87,17 +84,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.serve">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="build (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/phone_book_webpack/frontend/package.json" />
       <command value="run" />
@@ -204,14 +190,11 @@
       <workItem from="1620654735175" duration="813000" />
       <workItem from="1620658913481" duration="5688000" />
       <workItem from="1620704720124" duration="5435000" />
-      <workItem from="1620710643987" duration="20076000" />
-    </task>
-    <task id="LOCAL-00043" summary="Испарвлены замечания по задача css_form">
-      <created>1614613749433</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1614613749433</updated>
+      <workItem from="1620710643987" duration="20445000" />
+      <workItem from="1621336006742" duration="15265000" />
+      <workItem from="1621422183569" duration="7564000" />
+      <workItem from="1621438569529" duration="7986000" />
+      <workItem from="1621511134786" duration="13004000" />
     </task>
     <task id="LOCAL-00044" summary="Испарвлены замечания по задача todo_list">
       <created>1614625198860</created>
@@ -549,7 +532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619121364626</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Выполнена задача Vuetify">
+      <created>1620734744219</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1620734744241</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,7 +558,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Исправлены замечания по задаче &quot;Работа с массивами&quot;" />
     <MESSAGE value="Исправлены замечания по задаче &quot;Работа с объектами&quot;" />
     <MESSAGE value="Исправлены замечания по задаче &quot;Underscore&quot;" />
     <MESSAGE value="Выполнена задача &quot;Todo_List_Vue&quot; путем использования одной компоненты" />
@@ -593,6 +582,7 @@
     <MESSAGE value="Поправлен config в задаче Webpack. Добавлен runtime в алиас vue" />
     <MESSAGE value="Создан модуль под задачу Vuetify, идет настройка компонентов" />
     <MESSAGE value="Продолжаем работу с задачей Vuetify" />
-    <option name="LAST_COMMIT_MESSAGE" value="Продолжаем работу с задачей Vuetify" />
+    <MESSAGE value="Выполнена задача Vuetify" />
+    <option name="LAST_COMMIT_MESSAGE" value="Выполнена задача Vuetify" />
   </component>
 </project>

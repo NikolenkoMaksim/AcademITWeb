@@ -8,12 +8,32 @@
             fixed-tabs
             dark
             color="white"
-            slider-size="0"
+            slider-size="3"
         >
-          <v-tab to="/" class="tabText">
+          <v-tab
+              class="tab-text"
+              :to=$store.state.previousView
+              :disabled="$store.state.previousView === ''"
+          >
+            <v-icon left light>mdi-arrow-left</v-icon>
+            <span>Назад</span>
+          </v-tab>
+
+          <v-tab
+              @click="setMoviesFirstPage"
+              to="/"
+              class="tab-text"
+              :disabled="$store.state.currentView === '/'"
+          >
             Популярные фильмы
           </v-tab>
-          <v-tab to="/favorites" class="tabText">
+
+          <v-tab
+              to="/favorites"
+              active-class="activeTab"
+              class="tab-text"
+              :disabled="$store.state.currentView === '/favorites'"
+          >
             Избранное
           </v-tab>
         </v-tabs>
@@ -26,25 +46,18 @@
           <v-row
               justify="center"
               app
-              v-on:keyup.enter="search">
+              v-on:keyup.enter="search"
+          >
             <v-col class="col-xl-6 col-lg-6 col-md-8 col-sm-8 col-xs-12 mb-0">
               <v-text-field
-                  v-model="searchText"
+                  v-model=searchText
+                  class="mx-4"
+                  flat
+                  hide-details
+                  label="Поиск"
+                  prepend-inner-icon="mdi-magnify"
                   :clearable=true
-                  placeholder="Поиск"
-                  background-color="#EDE7F6"
-                  height="2rem"
-                  dense
-                  class="text-h6"
               ></v-text-field>
-            </v-col>
-            <v-col class="mb-0 col-2 col-xs-4" align="centre">
-              <v-btn
-                  @click="search"
-                  class="myBackground myButtonText"
-              >
-                Поиск
-              </v-btn>
             </v-col>
           </v-row>
 
@@ -67,43 +80,40 @@
 export default {
   name: 'App',
 
-  data: () => ({
-    searchText: "",
-  }),
+  data: function () {
+    return {
+      searchText: ""
+    }
+  },
 
   methods: {
     search() {
-      if(this.searchText !== "") {
+      if (this.searchText !== "") {
         this.$store.commit("setSearchResultsPage", 1);
         this.$store.commit("setSearchText", this.searchText);
-        this.searchText = "";
         this.$store.dispatch("loadSearchResults");
         this.$router.push({path: "/search"});
       }
     },
 
-    linkToMovie() {
-      this.$router.push({path: "/"});
-    },
-
-    linkToFavorites() {
-      this.$router.push({path: "/favorites"});
+    setMoviesFirstPage() {
+      this.$store.commit("setCurrentMoviesPage", 1);
     }
   }
 };
 </script>
 
 <style>
-.myBackground {
+.background {
   background-color: #EDE7F6 !important;
 }
 
-.tabText {
+.tab-text {
   font-size: 0.9rem !important;
   color: #FFF !important;
 }
 
-.movieTitle {
+.movie-title {
   font-size: 1.1rem !important;
   font-weight: 700 !important;
   line-height: 1.4rem !important;
@@ -113,7 +123,7 @@ export default {
   padding-left: 1.5rem;
 }
 
-.myButtonText {
+.search-button-text {
   font-size: 0.9rem !important;
   font-weight: 600 !important;
 }
@@ -126,13 +136,22 @@ a:-webkit-any-link {
   font-size: 1.1rem;
 }
 
-.containerTitle {
+.container-title {
   font-weight: 500;
   font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
 }
 
-.pointerCursor {
+.pointer-cursor {
   cursor: pointer;
+}
+
+.v-tab--disabled{
+  pointer-events: none;
+  opacity: 1.0 !important;
+}
+
+.activeClass {
+  background-color: #af17ff;
 }
 </style>

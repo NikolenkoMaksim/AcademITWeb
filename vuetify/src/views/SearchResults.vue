@@ -1,7 +1,7 @@
 <template>
   <v-container class="lighten-5">
     <v-row v-if="$store.state.searchResults.length === 0">
-      <v-col class="text-center containerTitle pt-5 pb-5">
+      <v-col class="text-center container-title pt-5 pb-5">
         По запросу "{{ $store.state.searchText }}" ничего не найдено
       </v-col>
     </v-row>
@@ -21,7 +21,7 @@
       </v-row>
 
       <v-row>
-        <v-col class="text-center containerTitle pt-5 pb-5">
+        <v-col class="text-center container-title pt-5 pb-5">
           Результаты поиска по запросу "{{ $store.state.searchText }}"
         </v-col>
       </v-row>
@@ -33,7 +33,7 @@
             :key="movie.id"
         >
           <v-card
-              class="myBackground"
+              class="background"
               max-height="100%"
               height="100%"
           >
@@ -41,13 +41,13 @@
               <span
                   v-if="movie.favorite"
                   @click="invertFavorite(movie.id)"
-                  class="pointerCursor"
+                  class="pointer-cursor"
                   title="Удалить из избранного"
               >
                 &#x1f9e1;
               </span>
               <span
-                  v-else class="pointerCursor"
+                  v-else class="pointer-cursor"
                   @click="invertFavorite(movie.id)"
                   title="Добавить в избранное"
               >
@@ -56,20 +56,22 @@
             </v-card-text>
 
             <v-img
+                lazy-src="noPosterBig.png"
                 :src=movie.posterW342
                 alt="poster"
                 @click="openMoviePage(movie.id)"
-                class="pointerCursor"
+                class="pointer-cursor"
+                height="70%"
             ></v-img>
 
             <v-card-text
                 @click="openMoviePage(movie.id)"
-                class="text-center pb-0 pointerCursor movieTitle"
+                class="text-center pb-0 pointer-cursor movie-title"
             >
               {{ movie.title }}
             </v-card-text>
 
-            <v-card-subtitle class="pb-0 pt-2 text-center genres">
+            <v-card-subtitle class="pb-0 pt-2 mb-3 text-center genres">
             <span
                 v-for="genreId in movie.genre_ids"
                 :key="genreId"
@@ -83,16 +85,14 @@
 
       <v-row>
         <v-col>
-          <a href="#app">
-            <v-pagination
-                v-model="page"
-                :length=$store.state.totalSearchResultsPages
-                prev-icon="mdi-menu-left"
-                next-icon="mdi-menu-right"
-                total-visible="9"
-                color="#7C4DFF"
-            ></v-pagination>
-          </a>
+          <v-pagination
+              v-model="page"
+              :length=$store.state.totalSearchResultsPages
+              prev-icon="mdi-menu-left"
+              next-icon="mdi-menu-right"
+              total-visible="9"
+              color="#7C4DFF"
+          ></v-pagination>
         </v-col>
       </v-row>
     </template>
@@ -103,20 +103,25 @@
 export default {
   name: "SearchResults",
 
-  data: () => ({
-    page: 1
-  }),
+  data: function () {
+    return {
+      page: 1
+    }
+  },
 
   beforeCreate() {
     if (this.$store.state.searchText === "") {
       this.$router.push({path: "/"});
     }
+
+    this.$store.commit("setCurrentView", "/search");
   },
 
   watch: {
     page() {
       this.$store.commit("setSearchResultsPage", this.page);
       this.$store.dispatch("loadSearchResults");
+      document.location.href = "#app";
     }
   },
 

@@ -1,7 +1,7 @@
 <template>
   <v-container v-if="totalPages === 0">
     <v-row>
-      <v-col class="text-center align-center containerTitle pt-5 pb-5">
+      <v-col class="text-center align-center container-title pt-5 pb-5">
         Нет избранных фильмов
       </v-col>
     </v-row>
@@ -22,7 +22,7 @@
     </v-row>
 
     <v-row>
-      <v-col class="text-center containerTitle pt-5 pb-5">
+      <v-col class="text-center container-title pt-5 pb-5">
         Избранные фильмы
       </v-col>
     </v-row>
@@ -34,15 +34,16 @@
           :key="movie.id"
       >
         <v-card
-            class="myBackground"
+            class="background"
             max-height="100%"
-            height="100%">
+            height="100%"
+        >
           <v-card-text
               @click="deleteFavorite(movie.id)"
               class="text-right text-h6 pt-1 pb-1"
           >
             <span
-                class="pointerCursor"
+                class="pointer-cursor"
                 title="Удалить из избранного"
             >
               &#10006;
@@ -50,15 +51,17 @@
           </v-card-text>
 
           <v-img
+              lazy-src="noPosterBig.png"
               :src=movie.posterW342
               alt="poster"
               @click="openMoviePage(movie.id)"
-              class="pointerCursor"
+              class="pointer-cursor"
+              height="75%"
           ></v-img>
 
           <v-card-text
               @click="openMoviePage(movie.id)"
-              class="text-center pb-0 pointerCursor movieTitle"
+              class="text-center pb-0 pointer-cursor movie-title"
           >
             {{ movie.title }}
           </v-card-text>
@@ -67,7 +70,6 @@
     </v-row>
     <v-row>
       <v-col>
-        <a href="#app">
           <v-pagination
               v-model="page"
               :length="totalPages"
@@ -76,7 +78,6 @@
               total-visible="9"
               color="#7C4DFF"
           ></v-pagination>
-        </a>
       </v-col>
     </v-row>
   </v-container>
@@ -86,10 +87,23 @@
 export default {
   name: "FavoritesMovies",
 
-  data: () => ({
-    page: 1,
-    count: 1
-  }),
+  data: function() {
+    return {
+      page: 1,
+      maximumMoviesInPage: 20,
+      count: 1
+    }
+  },
+
+  beforeCreate() {
+    this.$store.commit("setCurrentView", "/favorites");
+  },
+
+  watch: {
+    page() {
+      document.location.href = "#app";
+    }
+  },
 
   computed: {
     totalPages: function () {
@@ -103,7 +117,7 @@ export default {
         return 0;
       }
 
-      return (localStorage.length - 1) / 20 + 1;
+      return (localStorage.length - 1) / this.maximumMoviesInPage + 1;
     },
 
     movies: function () {
@@ -113,12 +127,12 @@ export default {
 
       localStorage.removeItem("loglevel:webpack-dev-server");
 
-      let movies = [];
+      const movies = [];
 
-      for (let i = (this.page - 1) * 20; i < Math.min(localStorage.length, this.page * 20); i++) {
-        let movieId = localStorage.key(i);
+      for (let i = (this.page - 1) * this.maximumMoviesInPage; i < Math.min(localStorage.length, this.page * 20); i++) {
+        const movieId = localStorage.key(i);
 
-        let movieInformation = localStorage.getItem(movieId).split("~");
+        const movieInformation = localStorage.getItem(movieId).split("~");
 
         movies.push({
           id: movieId,
@@ -143,7 +157,7 @@ export default {
     deleteFavorite(movieId) {
       this.count++;
 
-      if ((localStorage.length - 1) % 20 === 0 && this.page > 1) {
+      if ((localStorage.length - 1) % this.maximumMoviesInPage === 0 && this.page > 1) {
         this.page--;
       }
 
