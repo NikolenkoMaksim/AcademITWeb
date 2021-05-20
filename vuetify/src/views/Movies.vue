@@ -106,11 +106,12 @@ export default {
   },
 
   created() {
+    console.log("djok");
     this.page = this.$store.state.currentMoviesPage;
   },
 
   watch: {
-    paginationPage() {
+    page() {
       if (this.page !== this.$store.state.currentMoviesPage) {
         this.$store.commit("setCurrentMoviesPage", this.page);
         this.$store.dispatch("loadMovies");

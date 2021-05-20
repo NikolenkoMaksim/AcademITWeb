@@ -11,6 +11,11 @@ const routes = [
     component: Movies
   },
   {
+    path: '/moviesFirstPage',
+    name: 'moviesFirstPage',
+    component: () => import('../views/MoviesFirstPage.vue')
+  },
+  {
     path: '/movie',
     name: 'Movie',
     component: () => import('../views/Movie.vue')

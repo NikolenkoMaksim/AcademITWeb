@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e9e80c8-522f-4a19-b014-971768528a2e" name="Default Changelist" comment="" />
+    <list default="true" id="1e9e80c8-522f-4a19-b014-971768528a2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/vuetify/src/views/MoviesFirstPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/views/Movies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/Movies.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +52,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="14" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/phone_book_webpack/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vuetify/src/views" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -60,11 +66,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Studing\IdeaProjects\AcademITWeb\vuetify\src\views" />
       <recent name="C:\Documents\IdeaProjects\AcademITWeb\phone_book_webpack\public" />
       <recent name="C:\Documents\IdeaProjects\AcademITWeb\webpack\public" />
       <recent name="C:\Documents\IdeaProjects\AcademITWeb\webpack\frontend" />
       <recent name="C:\Documents\IdeaProjects\AcademITWeb\webpack" />
-      <recent name="C:\Documents\IdeaProjects\AcademITWeb\phone_book_server\public\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Documents\IdeaProjects\AcademITWeb\todo_list_jquery\todo_list_js" />
@@ -185,14 +191,7 @@
       <workItem from="1621336006742" duration="15265000" />
       <workItem from="1621422183569" duration="7564000" />
       <workItem from="1621438569529" duration="7986000" />
-      <workItem from="1621511134786" duration="13279000" />
-    </task>
-    <task id="LOCAL-00045" summary="Испарвлены замечания по задача todo_list_jquery">
-      <created>1614625367632</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1614625367632</updated>
+      <workItem from="1621511134786" duration="15921000" />
     </task>
     <task id="LOCAL-00046" summary="Первая работа с npm">
       <created>1614698751763</created>
@@ -530,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621529311579</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="Исправлены заменчания по задачу Vuetify">
+      <created>1621529354451</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1621529354451</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

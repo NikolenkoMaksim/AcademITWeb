@@ -8,7 +8,7 @@
             fixed-tabs
             dark
             color="white"
-            slider-size="3"
+            slider-size="0"
         >
           <v-tab
               class="tab-text"
@@ -20,10 +20,9 @@
           </v-tab>
 
           <v-tab
-              @click="setMoviesFirstPage"
-              to="/"
+              to="/moviesFirstPage"
               class="tab-text"
-              :disabled="$store.state.currentView === '/'"
+
           >
             Популярные фильмы
           </v-tab>
@@ -32,7 +31,7 @@
               to="/favorites"
               active-class="activeTab"
               class="tab-text"
-              :disabled="$store.state.currentView === '/favorites'"
+
           >
             Избранное
           </v-tab>
@@ -144,14 +143,5 @@ a:-webkit-any-link {
 
 .pointer-cursor {
   cursor: pointer;
-}
-
-.v-tab--disabled{
-  pointer-events: none;
-  opacity: 1.0 !important;
-}
-
-.activeClass {
-  background-color: #af17ff;
 }
 </style>
