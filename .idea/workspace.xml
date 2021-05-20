@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e9e80c8-522f-4a19-b014-971768528a2e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuetify/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuetify/src/components/HelloWorld.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuetify/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuetify/src/views/FavoritesMovies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/FavoritesMovies.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuetify/src/views/Movie.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/Movie.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuetify/src/views/Movies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/Movies.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuetify/src/views/SearchResults.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/SearchResults.vue" afterDir="false" />
-    </list>
+    <list default="true" id="1e9e80c8-522f-4a19-b014-971768528a2e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -194,14 +185,7 @@
       <workItem from="1621336006742" duration="15265000" />
       <workItem from="1621422183569" duration="7564000" />
       <workItem from="1621438569529" duration="7986000" />
-      <workItem from="1621511134786" duration="13004000" />
-    </task>
-    <task id="LOCAL-00044" summary="Испарвлены замечания по задача todo_list">
-      <created>1614625198860</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1614625198861</updated>
+      <workItem from="1621511134786" duration="13279000" />
     </task>
     <task id="LOCAL-00045" summary="Испарвлены замечания по задача todo_list_jquery">
       <created>1614625367632</created>
@@ -539,7 +523,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620734744241</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="Исправлены заменчания по задачу Vuetify">
+      <created>1621529311579</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1621529311579</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,7 +549,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Исправлены замечания по задаче &quot;Работа с объектами&quot;" />
     <MESSAGE value="Исправлены замечания по задаче &quot;Underscore&quot;" />
     <MESSAGE value="Выполнена задача &quot;Todo_List_Vue&quot; путем использования одной компоненты" />
     <MESSAGE value="Выполнена задача &quot;Todo_List_Vue&quot; путем использования нескольких компонент" />
@@ -583,6 +573,7 @@
     <MESSAGE value="Создан модуль под задачу Vuetify, идет настройка компонентов" />
     <MESSAGE value="Продолжаем работу с задачей Vuetify" />
     <MESSAGE value="Выполнена задача Vuetify" />
-    <option name="LAST_COMMIT_MESSAGE" value="Выполнена задача Vuetify" />
+    <MESSAGE value="Исправлены заменчания по задачу Vuetify" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлены заменчания по задачу Vuetify" />
   </component>
 </project>
