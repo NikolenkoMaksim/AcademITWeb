@@ -16,7 +16,7 @@
             prev-icon="mdi-menu-left"
             next-icon="mdi-menu-right"
             total-visible="9"
-            color="#7C4DFF"
+            color="rgb(162, 141, 218)"
         ></v-pagination>
       </v-col>
     </v-row>
@@ -33,51 +33,56 @@
           v-for="movie in movies"
           :key="movie.id"
       >
-        <v-card
-            class="background"
-            max-height="100%"
-            height="100%"
-        >
-          <v-card-text
-              @click="deleteFavorite(movie.id)"
-              class="text-right text-h6 pt-1 pb-1"
+        <v-hover v-slot="{ hover }">
+          <v-card
+              :elevation="hover ? 16 : 2"
+              :class="{ 'on-hover': hover }"
+              class="purple-background"
+              max-height="100%"
+              height="100%"
           >
+            <v-card-text
+                @click="deleteFavorite(movie.id)"
+                class="text-right text-h6 pt-1 pb-1"
+            >
             <span
                 class="pointer-cursor"
                 title="Удалить из избранного"
             >
               &#10006;
             </span>
-          </v-card-text>
+            </v-card-text>
 
-          <v-img
-              lazy-src="noPosterBig.png"
-              :src=movie.posterW342
-              alt="poster"
-              @click="openMoviePage(movie.id)"
-              class="pointer-cursor"
-              height="75%"
-          ></v-img>
+            <v-img
+                lazy-src="noPosterBig.png"
+                :src=movie.posterW342
+                alt="poster"
+                @click="openMoviePage(movie.id)"
+                class="pointer-cursor"
+                height="75%"
+            ></v-img>
 
-          <v-card-text
-              @click="openMoviePage(movie.id)"
-              class="text-center pb-0 pointer-cursor movie-title"
-          >
-            {{ movie.title }}
-          </v-card-text>
-        </v-card>
+            <v-card-text
+                @click="openMoviePage(movie.id)"
+                class="text-center pb-0 pointer-cursor movie-title"
+            >
+              {{ movie.title }}
+            </v-card-text>
+          </v-card>
+        </v-hover>
       </v-col>
     </v-row>
+
     <v-row>
       <v-col>
-          <v-pagination
-              v-model="page"
-              :length="totalPages"
-              prev-icon="mdi-menu-left"
-              next-icon="mdi-menu-right"
-              total-visible="9"
-              color="#7C4DFF"
-          ></v-pagination>
+        <v-pagination
+            v-model="page"
+            :length="totalPages"
+            prev-icon="mdi-menu-left"
+            next-icon="mdi-menu-right"
+            total-visible="9"
+            color="rgb(162, 141, 218)"
+        ></v-pagination>
       </v-col>
     </v-row>
   </v-container>
@@ -87,7 +92,7 @@
 export default {
   name: "FavoritesMovies",
 
-  data: function() {
+  data: function () {
     return {
       page: 1,
       maximumMoviesInPage: 20,

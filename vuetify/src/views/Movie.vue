@@ -86,7 +86,7 @@
         <v-row>
           <v-col v-if="movie.budget !== 0">
             <span class="font-weight-bold"> Бюджет: </span>
-           {{ $store.state.currentMovieData.budget }}$
+            {{ $store.state.currentMovieData.budget }}$
           </v-col>
         </v-row>
 
@@ -107,7 +107,7 @@
       </v-col>
     </v-row>
 
-    <template v-if="movie.length !== 0">
+    <template v-if="$store.state.similarMovies.length !== 0">
       <v-row>
         <v-col class="text-center container-title pt-5 pb-5">
           Рекомендуем также
@@ -120,13 +120,18 @@
             v-for="similarMovie in $store.state.similarMovies"
             :key="similarMovie.id"
         >
-          <v-card
-              class="background" max-height="100%" height="100%"
-          >
-            <v-card-text
-                @click="invertSimilarMovieFavorite(similarMovie.id)"
-                class="text-right text-h6 pt-1 pb-1"
+          <v-hover v-slot="{ hover }">
+            <v-card
+                :elevation="hover ? 16 : 2"
+                :class="{ 'on-hover': hover }"
+                class="purple-background"
+                max-height="100%"
+                height="100%"
             >
+              <v-card-text
+                  @click="invertSimilarMovieFavorite(similarMovie.id)"
+                  class="text-right text-h6 pt-1 pb-1"
+              >
             <span
                 v-if="similarMovie.favorite"
                 class="pointer-cursor"
@@ -134,30 +139,31 @@
             >
               &#x1f9e1;
             </span>
-              <span
-                  v-else class="pointer-cursor"
-                  title="Добавить в избранное"
-              >
+                <span
+                    v-else class="pointer-cursor"
+                    title="Добавить в избранное"
+                >
                 &#x1f90d;
             </span>
-            </v-card-text>
+              </v-card-text>
 
-            <v-img
-                @click="setCurrentMovieId(similarMovie.id)"
-                lazy-src="noPosterBig.png"
-                :src=similarMovie.posterW342
-                alt="poster"
-                class="pointer-cursor"
-                height="75%"
-            ></v-img>
+              <v-img
+                  @click="setCurrentMovieId(similarMovie.id)"
+                  lazy-src="noPosterBig.png"
+                  :src=similarMovie.posterW342
+                  alt="poster"
+                  class="pointer-cursor"
+                  height="75%"
+              ></v-img>
 
-            <v-card-text
-                @click="setCurrentMovieId(similarMovie.id)"
-                class="text-center pb-3 pointer-cursor movie-title"
-            >
-              {{ similarMovie.title }}
-            </v-card-text>
-          </v-card>
+              <v-card-text
+                  @click="setCurrentMovieId(similarMovie.id)"
+                  class="text-center pb-3 pointer-cursor movie-title"
+              >
+                {{ similarMovie.title }}
+              </v-card-text>
+            </v-card>
+          </v-hover>
         </v-col>
       </v-row>
     </template>

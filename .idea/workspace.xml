@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e9e80c8-522f-4a19-b014-971768528a2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/vuetify/src/views/MoviesFirstPage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuetify/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/views/FavoritesMovies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/FavoritesMovies.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/views/Movie.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/Movie.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/src/views/Movies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/Movies.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/views/SearchResults.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/SearchResults.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,14 +192,8 @@
       <workItem from="1621336006742" duration="15265000" />
       <workItem from="1621422183569" duration="7564000" />
       <workItem from="1621438569529" duration="7986000" />
-      <workItem from="1621511134786" duration="15921000" />
-    </task>
-    <task id="LOCAL-00046" summary="Первая работа с npm">
-      <created>1614698751763</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1614698751763</updated>
+      <workItem from="1621511134786" duration="16745000" />
+      <workItem from="1621611139007" duration="12405000" />
     </task>
     <task id="LOCAL-00047" summary="Исправлено название .gitignore">
       <created>1614699012308</created>
@@ -536,7 +531,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621529354451</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="Даработана задача Vuetify.">
+      <created>1621532705772</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1621532705772</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +557,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Исправлены замечания по задаче &quot;Underscore&quot;" />
     <MESSAGE value="Выполнена задача &quot;Todo_List_Vue&quot; путем использования одной компоненты" />
     <MESSAGE value="Выполнена задача &quot;Todo_List_Vue&quot; путем использования нескольких компонент" />
     <MESSAGE value="Выполнены подготовительные работы по задаче &quot;Phone book Vue&quot;" />
@@ -580,6 +581,7 @@
     <MESSAGE value="Продолжаем работу с задачей Vuetify" />
     <MESSAGE value="Выполнена задача Vuetify" />
     <MESSAGE value="Исправлены заменчания по задачу Vuetify" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлены заменчания по задачу Vuetify" />
+    <MESSAGE value="Даработана задача Vuetify." />
+    <option name="LAST_COMMIT_MESSAGE" value="Даработана задача Vuetify." />
   </component>
 </project>

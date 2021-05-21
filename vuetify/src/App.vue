@@ -3,10 +3,9 @@
     <v-app id="inspire">
       <v-card>
         <v-tabs
-            background-color="deep-purple accent-4"
+            background-color="#906fbd"
             center-active
             fixed-tabs
-            dark
             color="white"
             slider-size="0"
         >
@@ -22,7 +21,7 @@
           <v-tab
               to="/moviesFirstPage"
               class="tab-text"
-
+              :class="{ 'selected-tab': $store.state.currentView === '/' }"
           >
             Популярные фильмы
           </v-tab>
@@ -31,7 +30,7 @@
               to="/favorites"
               active-class="activeTab"
               class="tab-text"
-
+              :class="{ 'selected-tab': $store.state.currentView === '/favorites' }"
           >
             Избранное
           </v-tab>
@@ -103,8 +102,16 @@ export default {
 </script>
 
 <style>
-.background {
-  background-color: #EDE7F6 !important;
+.theme--light.v-sheet.purple-background {
+  background-color: rgba(178, 163, 199, 0.45);
+}
+
+.theme--light.v-sheet.purple-background.v-card.on-hover {
+  background-color: rgba(178, 160, 198, 0.8);
+}
+
+.v-pagination.v-pagination__item--active {
+  background-color: rgb(162, 141, 218);
 }
 
 .tab-text {
@@ -112,23 +119,18 @@ export default {
   color: #FFF !important;
 }
 
-.movie-title {
-  font-size: 1.1rem !important;
-  font-weight: 700 !important;
-  line-height: 1.4rem !important;
+.v-tab.selected-tab {
+  background: #7f55b7;
+}
+
+.v-card__text.movie-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.4rem;
 }
 
 .v-input__slot {
   padding-left: 1.5rem;
-}
-
-.search-button-text {
-  font-size: 0.9rem !important;
-  font-weight: 600 !important;
-}
-
-a:-webkit-any-link {
-  text-decoration: none !important;
 }
 
 .theme--light.v-pagination .v-pagination__item {
@@ -143,5 +145,13 @@ a:-webkit-any-link {
 
 .pointer-cursor {
   cursor: pointer;
+}
+
+.theme--light.v-tabs .v-tab:hover::before {
+  opacity: 0.08 !important;
+}
+
+.theme--light.v-tabs > .v-tabs-bar .v-tab:not(.v-tab--active) > .v-icon.v-icon.mdi {
+  color: #FFF;
 }
 </style>
