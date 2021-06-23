@@ -11,36 +11,24 @@ const routes = [
     component: Movies
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/moviesFirstPage',
+    name: 'moviesFirstPage',
+    component: () => import('../views/MoviesFirstPage.vue')
   },
   {
     path: '/movie',
     name: 'Movie',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "movie" */ '../views/Movie.vue')
+    component: () => import('../views/Movie.vue')
   },
   {
     path: '/search',
     name: 'SearchResults',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "search" */ '../views/SearchResults.vue')
+    component: () => import('../views/SearchResults.vue')
   },
   {
     path: '/favorites',
     name: 'FavoritesMovies',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "search" */ '../views/FavoritesMovies')
+    component: () => import('../views/FavoritesMovies')
   }
 ]
 

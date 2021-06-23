@@ -3,17 +3,35 @@
     <v-app id="inspire">
       <v-card>
         <v-tabs
-            background-color="deep-purple accent-4"
+            background-color="#906fbd"
             center-active
             fixed-tabs
-            dark
             color="white"
             slider-size="0"
         >
-          <v-tab to="/" class="tabText">
+          <v-tab
+              class="tab-text"
+              :to=$store.state.previousView
+              :disabled="$store.state.previousView === ''"
+          >
+            <v-icon left light>mdi-arrow-left</v-icon>
+            <span>Назад</span>
+          </v-tab>
+
+          <v-tab
+              to="/moviesFirstPage"
+              class="tab-text"
+              :class="{ 'selected-tab': $store.state.currentView === '/' }"
+          >
             Популярные фильмы
           </v-tab>
-          <v-tab to="/favorites" class="tabText">
+
+          <v-tab
+              to="/favorites"
+              active-class="activeTab"
+              class="tab-text"
+              :class="{ 'selected-tab': $store.state.currentView === '/favorites' }"
+          >
             Избранное
           </v-tab>
         </v-tabs>
@@ -21,26 +39,23 @@
 
       <v-main>
         <v-container
-            class="fill-height"
             fluid
         >
           <v-row
-              align="center"
               justify="center"
               app
-              v-on:keyup.enter="search">
-            <v-col cols="4">
+              v-on:keyup.enter="search"
+          >
+            <v-col class="col-xl-6 col-lg-6 col-md-8 col-sm-8 col-xs-12 mb-0">
               <v-text-field
-                  v-model="searchText"
+                  v-model=searchText
+                  class="mx-4"
+                  flat
+                  hide-details
+                  label="Поиск"
+                  prepend-inner-icon="mdi-magnify"
                   :clearable=true
-                  placeholder="Поиск"
-                  background-color="#EDE7F6"
-                  height="3rem"
-                  class="text-h6"
               ></v-text-field>
-            </v-col>
-            <v-col cols="1">
-              <v-btn @click="search" large class="myBackground myButtonText">Поиск</v-btn>
             </v-col>
           </v-row>
 
@@ -63,80 +78,80 @@
 export default {
   name: 'App',
 
-  data: () => ({
-    searchText: "",
-  }),
-
-  beforeCreate() {
-    this.$store.dispatch("loadConfiguration");
+  data: function () {
+    return {
+      searchText: ""
+    }
   },
 
   methods: {
     search() {
-      if(this.searchText !== "") {
+      if (this.searchText !== "") {
         this.$store.commit("setSearchResultsPage", 1);
-        this.$store.commit("setSearchedText", this.searchText);
-        this.searchText = "";
+        this.$store.commit("setSearchText", this.searchText);
         this.$store.dispatch("loadSearchResults");
         this.$router.push({path: "/search"});
       }
     },
 
-    linkToMovie() {
-      this.$router.push({path: "/"});
-    },
-
-    linkToFavorites() {
-      this.$router.push({path: "/favorites"});
+    setMoviesFirstPage() {
+      this.$store.commit("setCurrentMoviesPage", 1);
     }
   }
 };
 </script>
 
 <style>
-.myBackground {
-  background-color: #EDE7F6 !important;
+.theme--light.v-sheet.purple-background {
+  background-color: rgba(178, 163, 199, 0.45);
 }
 
-.tabText {
-  font-size: 1.1rem !important;
+.theme--light.v-sheet.purple-background.v-card.on-hover {
+  background-color: rgba(178, 160, 198, 0.8);
+}
+
+.v-pagination.v-pagination__item--active {
+  background-color: rgb(162, 141, 218);
+}
+
+.tab-text {
+  font-size: 0.9rem !important;
   color: #FFF !important;
 }
 
-.movieTitle {
-  font-size: 1.5rem !important;
-  font-weight: 700 !important;
-  line-height: 1.8rem !important;
+.v-tab.selected-tab {
+  background: #7f55b7;
 }
 
-.genres {
-  font-size: 1.0rem !important;
+.v-card__text.movie-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.4rem;
 }
 
 .v-input__slot {
   padding-left: 1.5rem;
 }
 
-.myButtonText {
-  font-size: 1.1rem !important;
-  font-weight: 600 !important;
-}
-
-a:-webkit-any-link {
-  text-decoration: none !important;
-}
-
 .theme--light.v-pagination .v-pagination__item {
   font-size: 1.1rem;
 }
 
-.containerTitle {
+.container-title {
   font-weight: 500;
-  font-size: 2.0rem;
+  font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
 }
 
-.pointerCursor {
+.pointer-cursor {
   cursor: pointer;
+}
+
+.theme--light.v-tabs .v-tab:hover::before {
+  opacity: 0.08 !important;
+}
+
+.theme--light.v-tabs > .v-tabs-bar .v-tab:not(.v-tab--active) > .v-icon.v-icon.mdi {
+  color: #FFF;
 }
 </style>
