@@ -2,17 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e9e80c8-522f-4a19-b014-971768528a2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/vuetify/src/views/FavoritesMovies.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuetify/src/views/Movie.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuetify/src/views/SearchResults.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/babel.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/assets/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuetify/src/views/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/About.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/views/FavoritesMovies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/FavoritesMovies.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/views/Movie.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/Movie.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/src/views/Movies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/Movies.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/views/MoviesFirstPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/MoviesFirstPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/views/SearchResults.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/views/SearchResults.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/vue.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,13 +69,16 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/phone_book_webpack/public" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -87,13 +98,15 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.serve">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -590,5 +603,9 @@
     <MESSAGE value="Создан модуль под задачу Vuetify, идет настройка компонентов" />
     <MESSAGE value="Продолжаем работу с задачей Vuetify" />
     <option name="LAST_COMMIT_MESSAGE" value="Продолжаем работу с задачей Vuetify" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

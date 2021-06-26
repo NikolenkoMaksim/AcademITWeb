@@ -31,7 +31,8 @@ export default new Vuex.Store({
         totalSearchResultsPages: 1,
         currentFavoritesMovie: [],
         currentView: "",
-        previousView: ""
+        previousView: "",
+        errorView: false
     },
 
     mutations: {
@@ -58,7 +59,6 @@ export default new Vuex.Store({
 
         setCurrentMoviesPage(state, newPage) {
             state.currentMoviesPage = newPage;
-            console.log(state.currentMoviesPage);
         },
 
         setSearchResults(state, data) {
@@ -76,24 +76,43 @@ export default new Vuex.Store({
 
         invertMoviesFavorite(state, movieId) {
             const movie = state.movies.find(movie => movie.id === movieId);
-            this.commit("invertFavorite", movie);
+
+            if (movie.favorite) {
+                localStorage.removeItem(movie.id);
+            } else {
+                localStorage.setItem(movie.id, movie.title + "~" + movie.poster_path);
+            }
+
+            movie.favorite = !movie.favorite;
         },
 
         invertCurrentMovieFavorite(state) {
-            state.currentMovieData.favorite = !state.currentMovieData.favorite;
+            const movie = state.currentMovieData;
+
+            if (movie.favorite) {
+                localStorage.removeItem(movie.id);
+            } else {
+                localStorage.setItem(movie.id, movie.title + "~" + movie.poster_path);
+            }
+
+            movie.favorite = !movie.favorite;
         },
 
         invertSearchFavorite(state, movieId) {
             const movie = state.searchResults.find(movie => movie.id === movieId);
-            this.commit("invertFavorite", movie);
+
+            if (movie.favorite) {
+                localStorage.removeItem(movie.id);
+            } else {
+                localStorage.setItem(movie.id, movie.title + "~" + movie.poster_path);
+            }
+
+            movie.favorite = !movie.favorite;
         },
 
         invertSimilarMovieFavorite(state, movieId) {
             const movie = state.similarMovies.find(movie => movie.id === movieId);
-            this.commit("invertFavorite", movie);
-        },
 
-        invertFavorite(state, movie) {
             if (movie.favorite) {
                 localStorage.removeItem(movie.id);
             } else {
@@ -106,37 +125,42 @@ export default new Vuex.Store({
         setCurrentView(state, currentPage) {
             state.previousView = state.currentView;
             state.currentView = currentPage;
+        },
+
+        setErrorView(state, value) {
+            state.errorView = value;
+            console.log("state.errorView = " + state.errorView);
         }
     },
 
     actions: {
         loadMovies(context) {
             axios.request({
-                url: this.state.apiUrl + "/movie/popular",
+                url: context.state.apiUrl + "/movie/popular",
                 method: "get",
                 params: {
-                    api_key: this.state.apiKey,
-                    language: this.state.desiredLanguage,
-                    page: this.state.currentMoviesPage
+                    api_key: context.state.apiKey,
+                    language: context.state.desiredLanguage,
+                    page: context.state.currentMoviesPage
                 }
             }).then(response => {
                 response.data.results.forEach(movie => {
-                    movie.posterW342 = this.state.posterUrls.w342 + movie.poster_path;
+                    movie.posterW342 = context.state.posterUrls.w342 + movie.poster_path;
                     movie.favorite = localStorage.getItem(movie.id) !== null;
                 });
                 context.commit("setMovies", response.data);
-            }).catch(error => {
-                alert(error);
+            }).catch(() => {
+                context.commit("setErrorView", true);
             });
         },
 
         loadGenres(context) {
             axios.request({
-                url: this.state.apiUrl + "/genre/movie/list",
+                url: context.state.apiUrl + "/genre/movie/list",
                 method: "get",
                 params: {
-                    api_key: this.state.apiKey,
-                    language: this.state.desiredLanguage
+                    api_key: context.state.apiKey,
+                    language: context.state.desiredLanguage
                 }
             }).then(response => {
                 const genres = {};
@@ -146,80 +170,81 @@ export default new Vuex.Store({
                 })
 
                 context.commit("setGenres", genres);
-            }).catch(error => {
-                alert(error);
+            }).catch(() => {
+                context.commit("setErrorView", true);
             });
         },
 
         loadMovieData(context) {
             axios.request({
-                url: this.state.apiUrl + "/movie/" + this.state.currentMovieId,
+                url: context.state.apiUrl + "/movie/" + context.state.currentMovieId,
                 method: "get",
                 params: {
-                    api_key: this.state.apiKey,
-                    language: this.state.desiredLanguage
+                    api_key: context.state.apiKey,
+                    language: context.state.desiredLanguage
                 }
             }).then(response => {
-                response.data.posterW342 = this.state.posterUrls.w342 + response.data.poster_path;
-                response.data.favorite = localStorage.getItem(response.data.id) !== null;
-                response.data.isHasGenres = response.data.genres.length !== 0;
+                const data = response.data;
 
-                if (response.data.release_date !== "") {
-                    const release = response.data.release_date.split("-");
-                    response.data.releaseDate = release[2] + "." + release[1] + "." + release[0];
+                data.posterW342 = context.state.posterUrls.w342 + data.poster_path;
+                data.favorite = localStorage.getItem(data.id) !== null;
+                data.isHasGenres = data.genres.length !== 0;
+
+                if (data.release_date !== "") {
+                    const release = data.release_date.split("-");
+                    data.releaseDate = release[2] + "." + release[1] + "." + release[0];
                 }
 
-                if (response.data.runtime !== 0) {
-                    response.data.runtime2 = Math.floor(response.data.runtime / 60) + " час "
-                        + response.data.runtime % 60 + " мин";
+                if (data.runtime !== 0) {
+                    data.runtime2 = Math.floor(data.runtime / 60) + " час " + data.runtime % 60 + " мин";
                 }
 
                 context.commit("setMovieData", response.data);
-            }).catch(error => {
-                alert(error);
+            }).catch(() => {
+                context.commit("setErrorView", true);
             });
         },
 
         loadSimilarMovies(context) {
             axios.request({
-                url: this.state.apiUrl + "/movie/" + this.state.currentMovieId + "/similar",
+                url: context.state.apiUrl + "/movie/" + context.state.currentMovieId + "/similar",
                 method: "get",
                 params: {
-                    api_key: this.state.apiKey,
-                    language: this.state.desiredLanguage,
+                    api_key: context.state.apiKey,
+                    language: context.state.desiredLanguage,
                     page: 1
                 }
             }).then(response => {
                 response.data.results.forEach(movie => {
-                    movie.posterW342 = this.state.posterUrls.w342 + movie.poster_path;
-                    movie.posterOriginal = this.state.posterUrls.original + movie.poster_path;
+                    movie.posterW342 = context.state.posterUrls.w342 + movie.poster_path;
+                    movie.posterOriginal = context.state.posterUrls.original + movie.poster_path;
                     movie.favorite = localStorage.getItem(movie.id) !== null;
                 });
                 context.commit("setSimilarMovies", response.data.results);
-            }).catch(error => {
-                alert(error);
+            }).catch(() => {
+                context.commit("setErrorView", true);
             });
         },
 
         loadSearchResults(context) {
             axios.request({
-                url: this.state.apiUrl + "/search/movie?api_key=" + this.state.apiKey,
+                url: context.state.apiUrl + "/search/movie",
                 method: "get",
                 params: {
-                    api_key: this.state.apiKey,
-                    language: this.state.desiredLanguage,
-                    query: this.state.searchText,
-                    page: this.state.currentSearchResultsPage
+                    api_key: context.state.apiKey,
+                    language: context.state.desiredLanguage,
+                    query: context.state.searchText,
+                    page: context.state.currentSearchResultsPage
                 }
             }).then(response => {
                 response.data.results.forEach(movie => {
-                    movie.posterW342 = this.state.posterUrls.w342 + movie.poster_path;
-                    movie.posterOriginal = this.state.posterUrls.original + movie.poster_path;
+                    movie.posterW342 = context.state.posterUrls.w342 + movie.poster_path;
+                    movie.posterOriginal = context.state.posterUrls.original + movie.poster_path;
                     movie.favorite = localStorage.getItem(movie.id) !== null;
                 });
                 context.commit("setSearchResults", response.data);
-            }).catch(error => {
-                alert(error);
+            }).catch(() => {
+                context.commit("setErrorView", true);
             });
         }
     }
